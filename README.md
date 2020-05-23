@@ -1,3 +1,4 @@
+## memo
 
 ### 200518
 > markdownのnpmをどれにするか迷ったが、「react-markdown」「react-mde」の組み合わせで進めることにする。
@@ -10,4 +11,5 @@ react-md-editorでのMD部の構築をする。
 
 ### 200523
 
-decide library react-simple-mde-editor. try to deproy github peges.
+decide library react-simple-mde-editor. try to deproy github pege.
+
