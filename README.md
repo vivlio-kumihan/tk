@@ -13,3 +13,16 @@ react-md-editorでのMD部の構築をする。
 
 decide library react-simple-mde-editor. try to deproy github pege.
 
+```
+$ npm install gh-pages --save-dev
+```
+
+```
+"homepage": "http://username.github.io/react-pages"
+
+"scripts": {
+  ...
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+}
+```
