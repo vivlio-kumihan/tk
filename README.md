@@ -17,6 +17,8 @@ decide library react-simple-mde-editor. try to deproy github pege.
 $ npm install gh-pages --save-dev
 ```
 
+__modify package.json__
+
 ```
 "homepage": "http://username.github.io/react-pages"
 
@@ -25,4 +27,8 @@ $ npm install gh-pages --save-dev
   "predeploy": "npm run build",
   "deploy": "gh-pages -d build"
 }
+```
+
+```
+$ npm run deploy
 ```
