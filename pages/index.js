@@ -5,8 +5,8 @@ export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>kumihan.com</title>
+        <link rel="icon" href="/profile_image_Apple.ico" />
       </Head>
 
       <main>
@@ -56,7 +56,7 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
+          <img src="/kumihan.svg" alt="Logo" className="logo" />
         </a>
       </footer>
 
@@ -96,6 +96,7 @@ export default function Home() {
           display: flex;
           justify-content: center;
           align-items: center;
+          color: #0070f3;
         }
 
         a {
@@ -180,7 +181,7 @@ export default function Home() {
         }
 
         .logo {
-          height: 1em;
+          height: 1.5em;
         }
 
         @media (max-width: 600px) {
