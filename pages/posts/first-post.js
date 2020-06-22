@@ -10,9 +10,7 @@ const FirstPost = () => {
         <link rel="icon" href="/profile_image_Apple.ico" />
       </Head>
       <h1>First Post</h1>
-      <Link href="/">
-        <a>Back to Home</a>
-      </Link>
+      <p>hello, hello, hello.</p>
     </Layout>
   ) 
 }
