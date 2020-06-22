@@ -1,0 +1,26 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: serif;
+  line-height: 1.6;
+  font-size: 3.5mm;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+a:hover {
+  color:goldenrod;
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
