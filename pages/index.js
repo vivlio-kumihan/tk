@@ -28,13 +28,15 @@ const Home = ({allPostsData}) => {
           Blog
         </h2>
         <ul className={utilStyles.list}>
-          {allPostsData.map(({id, date, title}) => (
+          {allPostsData.map(({id, date, title, tag}) => (
             <li className={utilStyles.listItem} key={id}>
               {title}
               <br />
               {id}
               <br />
               {date}
+              <br />
+              {tag}
             </li>
           ))}
         </ul>
