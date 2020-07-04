@@ -6,7 +6,8 @@ export default function Home() {
     <div>
       <Head>
         <title>takahiro blog</title>
-        <link rel="icon" href="/profile_image_Apple.ico" />
+        <link rel="icon" href="/profile_image_Apple.ico"
+              as={process.env.BACKEND_URL + '../public/profile_image_Apple.ico'} />
       </Head>
       <h1>
         Hello World.
