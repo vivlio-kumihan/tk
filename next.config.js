@@ -5,6 +5,15 @@
 const debug = process.env.NODE_ENV !== "production";
 
 module.exports = {
+
+};
+
+
+
+
+
+
+module.exports = {
   exportPathMap: function () {
     return {
       "/": { page: "/" },
@@ -12,8 +21,12 @@ module.exports = {
       "/first-post": { page: "/posts/first-post" },
     }
   },
-  //assetPrefix: '',
-  assetPrefix: !debug ? '/info/' : '',
+  // assetPrefix: '',
+  // assetPrefix: !debug ? '/info/' : '',
+  assetPrefix: process.env.NODE_ENV === "production" ? "/info" : "",
+  publicRuntimeConfig: {
+    basePath: process.env.NODE_ENV === "production" ? "/info" : "",
+  },
   webpack: (config, { dev }) => {
     // Perform customizations to webpack config
     // console.log('webpack');

@@ -6,7 +6,7 @@ export default function Home() {
     <div>
       <Head>
         <title>takahiro blog</title>
-        <link rel="icon" href="profile_image_Apple.ico"
+        <link rel="icon" href="/profile_image_Apple.ico"
               as={process.env.BACKEND_URL + '../public/profile_image_Apple.ico'} />
       </Head>
       <h1>
@@ -16,7 +16,7 @@ export default function Home() {
         <a>About</a>
       </Link>
       <div>
-        <img src="kumihan.svg" alt="kumihan logo" className="logo" />
+        <img src="/kumihan.svg" alt="kumihan logo" className="logo" />
       </div>
       <style jsx> {`
         .logo {
