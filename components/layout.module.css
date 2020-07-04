@@ -1,0 +1,6 @@
+/* 全体に関わる構造に関するスタイルを定義する */
+
+.container {
+	width: 36rem;
+	margin: 6rem auto;
+}

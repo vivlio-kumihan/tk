@@ -66,3 +66,35 @@ https://thierryc.github.io/Next-gh-page-example/
 ## The idea behind the example
 
 This example shows the most basic idea behind Next. We have 2 pages: `pages/index.js` and `pages/about.js`. The former responds to `/` requests and the latter to `/about`. Using `next/link` you can add hyperlinks between them with universal routing capabilities.
+
+
+# memo
+
+## CSS Styling called "styled-jsx"
+
+```
+<style jsx>{`
+  …
+`}</style>
+```
+
+## CSS Styling called "CSS modules"
+
+```
+import peculiar_style from "./layout.module.css"
+
+export default function Layout({children}) {
+  return <div className={peculiar_style.container}>{children}</div>
+}
+```
+
+## CSS Styling called "Global CSS"
+
+```
+import "../styles/reset.css"
+import "../styles/global.css"
+
+export default function App({Component, pageProps}) {
+  return <Component {...pageProps} />
+}
+```
