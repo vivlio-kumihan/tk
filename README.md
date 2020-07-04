@@ -98,3 +98,21 @@ export default function App({Component, pageProps}) {
   return <Component {...pageProps} />
 }
 ```
+
+## index.jsの遺物
+
+```
+        <Link href='/about' as={process.env.BACKEND_URL + '/about'}>
+          <a>About</a>
+        </Link>
+        <div>
+          <img  src="/kumihan.svg" alt="kumihan logo" className="logo"
+            as={process.env.BACKEND_URL + "/kumihan.svg"} />
+        </div>
+        <style jsx> {`
+          .logo {
+            width: 10rem;
+          }
+        `}</style>
+
+```

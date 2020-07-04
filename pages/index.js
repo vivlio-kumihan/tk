@@ -1,35 +1,25 @@
-import Link from 'next/link'
 import Head from "next/head"
+import Layout, { siteTitle } from "../components/layout"
+import utilStyle from "../styles/util.module.css"
 
 export default function Home() {
   return (
-    <div>
+    <Layout home>
       <Head>
-        <title>takahiro blog</title>
-        <link rel="icon" href="/profile_image_Apple.ico"
-          as={process.env.BACKEND_URL + '/profile_image_Apple.ico'} />
+        <title>{siteTitle}</title>
       </Head>
       <h1>
-        Hello World.
+        Hello!
       </h1>
-      <Link href='/about' as={process.env.BACKEND_URL + '/about'}>
-        <a>About</a>
-      </Link>
-      <div>
-        <img  src="/kumihan.svg" alt="kumihan logo" className="logo"
-          as={process.env.BACKEND_URL + "/kumihan.svg"} />
-      </div>
-      <style jsx> {`
-        .logo {
-          width: 10rem;
-        }
+      <p>
+        Hi, I'm Nob. I'm a DTP operator and photographer.
+        <br />
+        Welcome my boring Blog...
+      </p>
+      <style jsx>{`
+        h1 { margin-top: 1rem; font-size: 10rem; line-height: 0.5; text-align: center; letter-spacing: -0.6rem;}
+        p { text-align:center }
       `}</style>
-    </div>
+    </Layout>
   )
 }
-
-
-
-
-// export default () => (
-// )

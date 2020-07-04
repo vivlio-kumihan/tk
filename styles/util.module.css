@@ -1,0 +1,11 @@
+.borderCircle {
+  border-radius: 9999px;
+}
+
+.padding1px {
+  padding-top: 1px;
+}
+
+.lightText {
+  color: rgba(153, 153, 153, 1)
+}
