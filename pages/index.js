@@ -7,7 +7,7 @@ export default function Home() {
       <Head>
         <title>takahiro blog</title>
         <link rel="icon" href="/profile_image_Apple.ico"
-              as={process.env.BACKEND_URL + '../public/profile_image_Apple.ico'} />
+          as={process.env.BACKEND_URL + '/profile_image_Apple.ico'} />
       </Head>
       <h1>
         Hello World.
@@ -16,7 +16,8 @@ export default function Home() {
         <a>About</a>
       </Link>
       <div>
-        <img src="/kumihan.svg" alt="kumihan logo" className="logo" />
+        <img  src="/kumihan.svg" alt="kumihan logo" className="logo"
+          as={process.env.BACKEND_URL + "/kumihan.svg"} />
       </div>
       <style jsx> {`
         .logo {
