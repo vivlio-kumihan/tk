@@ -1,14 +1,26 @@
 import Layout from "../../components/layout"
 import { getAllPostIds, getPostData } from "../../lib/posts"
-
-
+import Head from "next/head"
+import Date from "../../components/date"
 
 export default function Post({ postData }) {
   return (
     <Layout>
-      {postData.title}<br />
-      {postData.id}<br />
-      {postData.date}<br />
+      <Head>
+        <title>{postData.title}</title>
+      </Head>
+      <h2>
+        {postData.title}<br />
+      </h2>
+      <style jsx>{`
+        h2 {
+          margin-top: 1rem;
+          line-height: 0;
+        }
+      `}</style>
+      {/* {postData.id}<br />  ファイル名を記載する必要は無いと判断する。 */}
+      {/* {postData.date}<br />  this is origin code. under one replace code. */}
+      <Date dateString={postData.date} />
       <div dangerouslySetInnerHTML={{__html: postData.contentHtml}} />
     </Layout>
   )

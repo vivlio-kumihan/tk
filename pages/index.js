@@ -1,6 +1,7 @@
 import Head from "next/head"
 import Layout, { siteTitle } from "../components/layout"
 import { getSortedPostsData } from "../lib/posts"
+import Date from "../components/date"
 
 export default function Home({ allPostsData }) {
   return (
@@ -30,8 +31,8 @@ export default function Home({ allPostsData }) {
           {allPostsData.map(({ id, date, title }) => (
             <li key={id}>
               {title}<br />
-              {id}<br />
-              {date}
+              {/* {id}<br /> */}
+              <Date dateString={date} />
             </li>
           ))}
         </ul>
