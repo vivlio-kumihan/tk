@@ -1,13 +1,15 @@
 import Head from "next/head"
 import Layout, { siteTitle } from "../components/layout"
-import utilStyle from "../styles/util.module.css"
+import { getSortedPostsData } from "../lib/posts"
 
-export default function Home() {
+export default function Home({ allPostsData }) {
   return (
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
       </Head>
+
+      <section>
       <h1>
         Hello!
       </h1>
@@ -20,6 +22,27 @@ export default function Home() {
         h1 { margin-top: 1rem; font-size: 10rem; line-height: 0.5; text-align: center; letter-spacing: -0.6rem;}
         p { text-align:center }
       `}</style>
+      </section>
+
+      <section>
+        <h2>Blog</h2>
+        <ul>
+          {allPostsData.map(({ id, date, title }) => (
+            <li key={id}>
+              {title}<br />
+              {id}<br />
+              {date}
+            </li>
+          ))}
+        </ul>
+      </section>
     </Layout>
   )
+}
+
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData()
+  return {
+    props: { allPostsData }
+  }
 }

@@ -38,7 +38,7 @@ export default function Layout({ children, home }) {
             </h3>
               <style jsx>{`
                 h3 { font-weight: 900; }
-                a  { color: inherit; text-decoration: none; }
+                a  { color: inherit; text-decoration: none; letter-spacing: -0.025rem; }
               `}</style>
           </div>
         )}
