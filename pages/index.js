@@ -28,7 +28,8 @@ export default function Home({ allPostsData }) {
         <ul>
           {allPostsData.map(({ id, date, title }) => (
             <li className="indexLi" key={id}>
-              <Link href="/posts/[id]" as={`/posts/${id}`}>
+              <Link href="/posts/[id]" as={process.env.BACKEND_URL + '/posts/${id}'}>
+              {/* <Link href="/posts/[id]" as={`/posts/${id}`}> これが元*/ }
                 {title}
               </Link><br />
               {/* {id}<br /> ファイル名はいらないからコメントアウトする。*/}

@@ -48,7 +48,7 @@ export default function Layout({ children, home }) {
       </main>
       {!home && (
         <div className={layoutStyle.backToHome}>
-          <Link href="/">
+          <Link href="/" as={process.env.BACKEND_URL + '/'}>
             <a>← Back to Home</a>
           </Link>
         </div>
