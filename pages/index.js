@@ -28,9 +28,10 @@ export default function Home({ allPostsData }) {
         <ul>
           {allPostsData.map(({ id, date, title }) => (
             <li className="indexLi" key={id}>
-              <Link href="/posts/[id]" as={process.env.BACKEND_URL + '/posts/${id}'}>
-              {/* <Link href="/posts/[id]" as={`/posts/${id}`}> これが元*/ }
-                {title}
+              {/* この時点でgithubでブログを表をを諦めざる得ない。 */}
+              {/* <Link href="/posts/[id]" as={process.env.BACKEND_URL + '/posts/${id}'}> */}
+              <Link href="/posts/[id]" as={`/posts/${id}`}>
+                <a>{title}</a>
               </Link><br />
               {/* {id}<br /> ファイル名はいらないからコメントアウトする。*/}
               <div className="indexListDate">
