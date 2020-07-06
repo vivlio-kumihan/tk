@@ -1,7 +1,9 @@
 import Head from "next/head"
+import Link from "next/link"
 import Layout, { siteTitle } from "../components/layout"
 import { getSortedPostsData } from "../lib/posts"
 import Date from "../components/date"
+// import utilStyle from "../styles/util.module.css"
 
 export default function Home({ allPostsData }) {
   return (
@@ -11,32 +13,38 @@ export default function Home({ allPostsData }) {
       </Head>
 
       <section>
-      <h1>
+      <h1 className="indexH1">
         Hello!
       </h1>
-      <p>
+      <p className="catchCopy">
         Hi, I'm Nob. I'm a DTP operator and photographer.
         <br />
         Welcome my boring Blog...
       </p>
-      <style jsx>{`
-        h1 { margin-top: 1rem; font-size: 10rem; line-height: 0.5; text-align: center; letter-spacing: -0.6rem;}
-        p { text-align:center }
-      `}</style>
       </section>
 
       <section>
         <h2>Blog</h2>
         <ul>
           {allPostsData.map(({ id, date, title }) => (
-            <li key={id}>
-              {title}<br />
-              {/* {id}<br /> */}
-              <Date dateString={date} />
+            <li className="indexLi" key={id}>
+              <Link href="/posts/[id]" as={`/posts/${id}`}>
+                {title}
+              </Link><br />
+              {/* {id}<br /> ファイル名はいらないからコメントアウトする。*/}
+              <div className="indexListDate">
+                <Date dateString={date} />
+              </div>
             </li>
           ))}
         </ul>
       </section>
+      <style jsx>{`
+        .indexH1 { margin-top: 1rem; font-size: 10rem; line-height: 0.5; text-align: center; letter-spacing: -0.6rem; }
+        .catchCopy { font-size: 1.2rem; font-weight: 500; line-height: 1.4rem; text-align:center; }
+        .indexLi { font-size: 1.2rem; line-height: 1.3rem; }
+        .indexListDate { margin: 0.2rem 0 0.7rem 1.2rem; font-size: 0.9rem; }
+      `}</style>
     </Layout>
   )
 }

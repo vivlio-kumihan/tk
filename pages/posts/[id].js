@@ -10,12 +10,12 @@ export default function Post({ postData }) {
         <title>{postData.title}</title>
       </Head>
       <h2>
-        {postData.title}<br />
+        {postData.title}
       </h2>
       <style jsx>{`
         h2 {
           margin-top: 1rem;
-          line-height: 0;
+          line-height: 1.5rem;
         }
       `}</style>
       {/* {postData.id}<br />  ファイル名を記載する必要は無いと判断する。 */}
