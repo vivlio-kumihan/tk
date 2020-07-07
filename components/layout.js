@@ -1,58 +1,66 @@
-import Head from "next/head"
-import Link from "next/link"
-import layoutStyle from "./layout.module.css"
-import utilStyle from "../styles/util.module.css"
+import Head from 'next/head'
+import styles from './layout.module.css'
+import utilStyles from '../styles/utils.module.css'
+import Link from 'next/link'
 
-const name = "Nob Takahiro"
-export const siteTitle = "Blog Kumihan.com"
+const name = '[Your Name]'
+export const siteTitle = 'Next.js Sample Website'
 
 export default function Layout({ children, home }) {
   return (
-    <div className={layoutStyle.container}>
+    <div className={styles.container}>
       <Head>
-        <link rel="icon" href="/profile_image_Apple.ico"
-          as={process.env.BACKEND_URL + '/profile_image_Apple.ico'} />
-        <meta name="description" content="hogehoge" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="Learn how to build a personal website using Next.js"
+        />
+        <meta
+          property="og:image"
+          content={`https://og-image.now.sh/${encodeURI(
+            siteTitle
+          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
+        />
+        <meta name="og:title" content={siteTitle} />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={layoutStyle.header}>
+      <header className={styles.header}>
         {home ? (
-          <div>
-            <img src="/images/profile.jpg"
-              className={`${layoutStyle.headerHomeImage} ${utilStyle.borderCircle}`}
-              alt={name} />
-            <h2>{name}</h2>
-          </div>
+          <>
+            <img
+              src="/images/profile.jpg"
+              className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
+              alt={name}
+            />
+            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+          </>
         ) : (
-          <div>
+          <>
             <Link href="/">
               <a>
-                <img src="/images/profile.jpg"
-                  className={`${layoutStyle.headerImage} ${utilStyle.borderCircle}`}
-                  alt={name} />
+                <img
+                  src="/images/profile.jpg"
+                  className={`${styles.headerImage} ${utilStyles.borderCircle}`}
+                  alt={name}
+                />
               </a>
             </Link>
-            <h3>
+            <h2 className={utilStyles.headingLg}>
               <Link href="/">
-                <a>{name}</a>
+                <a className={utilStyles.colorInherit}>{name}</a>
               </Link>
-            </h3>
-              <style jsx>{`
-                h3 { font-weight: 900; }
-                a  { color: inherit; text-decoration: none; letter-spacing: -0.025rem; }
-              `}</style>
-          </div>
+            </h2>
+          </>
         )}
       </header>
-      <main>
-        {children}
-      </main>
+      <main>{children}</main>
       {!home && (
-        <div className={layoutStyle.backToHome}>
+        <div className={styles.backToHome}>
           <Link href="/">
-            <a>← Back to Home</a>
+            <a>← Back to home</a>
           </Link>
         </div>
       )}
     </div>
-  ) 
+  )
 }
