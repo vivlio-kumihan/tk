@@ -3,7 +3,6 @@ import Link from "next/link"
 import layoutStyle from "./layout.module.css"
 import utilStyle from "../styles/util.module.css"
 
-const name = "Nob Takahiro"
 export const siteTitle = "Blog Kumihan.com"
 
 export default function Layout({ children, home }) {
@@ -12,35 +11,26 @@ export default function Layout({ children, home }) {
       <Head>
         <link rel="icon" href="/profile_image_Apple.ico" />
         <meta name="description" content="hogehoge" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+        <script src="js/script.js"></script>
       </Head>
       <header className={layoutStyle.header}>
-        {home ? (
-          <div>
-            <img src="/images/profile.jpg"
-              className={`${layoutStyle.headerHomeImage} ${utilStyle.borderCircle}`}
-              alt={name} />
-            <h2>{name}</h2>
-          </div>
-        ) : (
-            <div>
-              <Link href="/">
-                <a>
-                  <img src="/images/profile.jpg"
-                    className={`${layoutStyle.headerImage} ${utilStyle.borderCircle}`}
-                    alt={name} />
-                </a>
-              </Link>
-              <h3>
-                <Link href="/">
-                  <a>{name}</a>
-                </Link>
-              </h3>
-              <style jsx>{`
-                h3 { font-weight: 900; }
-                a  { color: inherit; text-decoration: none; letter-spacing: -0.025rem; }
-              `}</style>
+        <div id="headerWrap">
+          <h1><img src="/images/logo.png" width="142" height="80" alt="logo" /></h1>
+          <nav id="mainnav">
+            <p id="menuWrap"><a id="menu"><span id="menuBtn"></span></a></p>
+            <div class="panel">
+              <ul>
+                <li><a href="#top">TOP</a></li>
+                <li><a href="#sec01">MESSAGE</a></li>
+                <li><a href="#sec02">GALLERY</a></li>
+                <li><a href="#sec03">PROJECT</a></li>
+                <li><a href="#sec04">BRAND</a></li>
+                <li><a href="#sec05">COMPANY</a></li>
+              </ul>
             </div>
-          )}
+          </nav>
+        </div>
       </header>
       <main>
         {children}
@@ -55,3 +45,34 @@ export default function Layout({ children, home }) {
     </div>
   )
 }
+
+
+{/* <header className={layoutStyle.header}>
+  {home ? (
+    <div>
+      <img src="/images/profile.jpg"
+        className={`${layoutStyle.headerHomeImage} ${utilStyle.borderCircle}`}
+        alt={name} />
+      <h2>{name}</h2>
+    </div>
+  ) : (
+      <div>
+        <Link href="/">
+          <a>
+            <img src="/images/profile.jpg"
+              className={`${layoutStyle.headerImage} ${utilStyle.borderCircle}`}
+              alt={name} />
+          </a>
+        </Link>
+        <h3>
+          <Link href="/">
+            <a>{name}</a>
+          </Link>
+        </h3>
+        <style jsx>{`
+                h3 { font-weight: 900; }
+                a  { color: inherit; text-decoration: none; letter-spacing: -0.025rem; }
+              `}</style>
+      </div>
+    )}
+</header> */}
