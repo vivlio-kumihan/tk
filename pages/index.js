@@ -18,22 +18,20 @@ export default function Home() {
           <img src="/images/catch-copy.png" alt="catch copy" />
         </div>
       </div>
-      <section className={indexStyle.sec02}>
-        <header>
-          <h2 className={indexStyle.headingLg}>Our Wroks</h2>
-        </header>
-        <ul className={indexStyle.gallery}>
-          <li><img src="/images/photo01.jpg" width="426" height="418" alt="" /></li>
-          <li><img src="/images/photo02.jpg" width="426" height="418" alt="" /></li>
-          <li><img src="/images/photo03.jpg" width="426" height="418" alt="" /></li>
-          <li><img src="/images/photo04.jpg" width="426" height="418" alt="" /></li>
-          <li><img src="/images/photo05.jpg" width="426" height="418" alt="" /></li>
-          <li><img src="/images/photo06.jpg" width="426" height="418" alt="" /></li>
-          <li><img src="/images/photo07.jpg" width="426" height="418" alt="" /></li>
-          <li><img src="/images/photo08.jpg" width="426" height="418" alt="" /></li>
-          <li><img src="/images/photo09.jpg" width="426" height="418" alt="" /></li>
-        </ul>
-      </section>      
+      <div className={indexStyle.ourWork}>
+        <h2 className={indexStyle.headingLg}><span>Our Wroks</span></h2>
+        <div className={indexStyle.ourWorkImgs}>
+          <div><img src="/images/photo01.jpg" alt="" /></div>
+          <div><img src="/images/photo02.jpg" alt="" /></div>
+          <div><img src="/images/photo03.jpg" alt="" /></div>
+          <div><img src="/images/photo04.jpg" alt="" /></div>
+          <div><img src="/images/photo05.jpg" alt="" /></div>
+          <div><img src="/images/photo06.jpg" alt="" /></div>
+          <div><img src="/images/photo07.jpg" alt="" /></div>
+          <div><img src="/images/photo08.jpg" alt="" /></div>
+          <div><img src="/images/photo09.jpg" alt="" /></div>
+        </div>
+      </div>      
     </Layout>
   )
 }

@@ -1,12 +1,12 @@
-@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
-@import url(https://fonts.googleapis.com/css?family=Pacifico);
-
+@import url("http://fonts.googleapis.com/earlyaccess/notosansjp.css");
+@import url("https://fonts.googleapis.com/css?family=Pacifico");
+@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");
 
 .mainImg{
 	position: relative;
   overflow: hidden;
   width: 100%;
-  height: 528px;
+  height: 480px;
 }
 
 .mainImg img{
@@ -21,14 +21,35 @@
 .catchCopy {
 	margin: 2rem auto;
 	width: 600px;
-
 }
 
-.catchCopy img{
-
+.ourWork {
+	margin: 0 2rem;
 }
 
+.headingLg {
+	font-family: 'Fredericka the Great', cursive;
+  margin: 0 auto 40px;
+	text-align: center;
+	background: url(/images/borderBlack.png) repeat-x 0 50%;
+	background-size: 1px 1px;
+}
 
+.headingLg span {
+	background: #fff;
+	padding: 0 80px;
+}
+
+.ourWorkImgs {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+.ourWorkImgs img {
+	width: 400px;
+  height: 400px;
+}
 
 /* reset */
 /* body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
