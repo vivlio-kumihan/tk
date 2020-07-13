@@ -1,9 +1,8 @@
 /* 全体に関わる構造に関するスタイルを定義する */
 
 .container {
-	width: 36rem;
-	padding: 0 1rem;
-	margin: 3rem auto 6rem;
+	width: 100%;
+	margin: 0rem auto 6rem;
 }
 
 .header {
@@ -12,28 +11,24 @@
 	align-items: center;
 }
 
-.headerImage {
-	margin: 0 auto;
-	width: 6rem;
-	height: 6rem;
+.headerLogo {
+	margin-top: 3rem;
 }
 
-.headerHomeImage {
+
+/* blog */
+.blogArticles {
+	margin-left: 22rem;
+}
+
+.blogHeaderImage {
 	margin: 0 auto;
-	width: 8rem;
-	width: 8rem;
+	width: 6rem;
+	width: 6rem;
 }
 
 .backToHome {
 	margin: 3rem 0 0;
-}
-
-#header{
-	text-align: center;
-}
-
-#header h1{
-	padding-top: 60px;
 }
 
 #mainnav a{

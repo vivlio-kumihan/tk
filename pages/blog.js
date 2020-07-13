@@ -14,34 +14,30 @@ export default function Blog({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <div>
+      <Link href="/">
+        <a>
+          <img src="/images/profile.jpg"
+            className={`${layoutStyle.blogHeaderImage} ${utilStyle.borderCircle}`}
+            alt={name} />
+        </a>
+      </Link>
+      <h3 className="blogTitle">
         <Link href="/">
-          <a>
-            <img src="/images/profile.jpg"
-              className={`${layoutStyle.headerImage} ${utilStyle.borderCircle}`}
-              alt={name} />
-          </a>
+          <a>{name}</a>
         </Link>
-        <h3 className="blogTitle">
-          <Link href="/">
-            <a>{name}</a>
-          </Link>
-        </h3>
-      </div>
-
+      </h3>
       <section>
         <h1 className="indexH1">
           Hello!
-      </h1>
+        </h1>
         <p className="catchCopy">
           Hi, I'm Nob. I'm a DTP operator and photographer.
-        <br />
-        Welcome my boring Blog...
-      </p>
+          <br />
+          Welcome my boring Blog...
+        </p>
       </section>
-
-      <section>
-        <h2>Blog</h2>
+      <section className={layoutStyle.blogArticles}>
+        <h2 className="sectionTitle">Blog</h2>
         <ul>
           {allPostsData.map(({ id, date, title }) => (
             <li className="indexLi" key={id}>
@@ -55,6 +51,11 @@ export default function Blog({ allPostsData }) {
             </li>
           ))}
         </ul>
+        <div className={layoutStyle.backToHome}>
+          <Link href="/">
+            <a>← Back to Home</a>
+          </Link>
+        </div>
       </section>
       <style jsx>{`
         .blogTitle {
@@ -78,6 +79,10 @@ export default function Blog({ allPostsData }) {
           font-weight: 500;
           line-height: 1.4rem;
           text-align:center;
+        }
+        .sectionTitle {
+          margin-top: 2rem;
+          line-height: 0.5rem;
         }
         .indexLi { font-size: 1.2rem;
           line-height: 1.3rem;

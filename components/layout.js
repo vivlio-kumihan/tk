@@ -15,22 +15,17 @@ export default function Layout({ children, home }) {
         <script src="js/script.js"></script>
       </Head>
       <header className={layoutStyle.header}>
-        <div id="headerWrap">
-          <h1><img src="/images/logo.png" width="142" height="80" alt="logo" /></h1>
-          <nav id="mainnav">
-            <p id="menuWrap"><a id="menu"><span id="menuBtn"></span></a></p>
-            <div class="panel">
-              <ul>
-                <li><a href="#top">TOP</a></li>
-                <li><a href="#sec01">MESSAGE</a></li>
-                <li><a href="#sec02">GALLERY</a></li>
-                <li><a href="#sec03">PROJECT</a></li>
-                <li><a href="#sec04">BRAND</a></li>
-                <li><a href="#sec05">COMPANY</a></li>
-              </ul>
-            </div>
-          </nav>
+        <div className={layoutStyle.headerLogo}>
+            <img src="/images/logo.png" width="142" height="80" alt="logo" />
         </div>
+        <nav className={layoutStyle.mainnav}>
+          <ul>
+            <li><a href="#top">HOME</a></li>
+            <li><a href="#sec01">COMPANY</a></li>
+            <li><a href="#sec02">WORKS</a></li>
+            <li><a href="#sec02">ACCESS</a></li>
+          </ul>
+        </nav>
       </header>
       <main>
         {children}
