@@ -16,7 +16,7 @@ export default function Home() {
       </div>
       <section className={indexStyle.sec01}>
         <h2>
-          つくってきたものが、プロフィールです。
+          キャッチコピーどうする？　つくってきたものが、プロフィールです。
         </h2>
       </section>
       <section className={indexStyle.sec02}>
