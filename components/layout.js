@@ -16,7 +16,7 @@ export default function Layout({ children, home }) {
       </Head>
       <header className={layoutStyle.header}>
         <div className={layoutStyle.headerLogo}>
-            <img src="/images/logo.png" width="142" height="80" alt="logo" />
+          <img src="/images/nishipri-logo.png" width="500px" alt="logo" />
         </div>
         <nav>
           <ul className={layoutStyle.mainNavUl}>

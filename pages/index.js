@@ -2,7 +2,6 @@ import Head from "next/head"
 import Link from "next/link"
 import Layout, { siteTitle } from "../components/layout"
 import indexStyle from "./index.module.css"
-import Date from "../components/date"
 
 export default function Home() {
   return (
@@ -14,14 +13,14 @@ export default function Home() {
       <div className={indexStyle.mainImg}>
         <img src="/images/AdobeStock_108590062.png" alt="" />
       </div>
-      <section className={indexStyle.sec01}>
-        <h2>
-          キャッチコピーどうする？　つくってきたものが、プロフィールです。
-        </h2>
-      </section>
+      <div className={indexStyle.catchCopy}>
+        <div>
+          <img src="/images/catch-copy.png" alt="catch copy" />
+        </div>
+      </div>
       <section className={indexStyle.sec02}>
         <header>
-          <h2><span>Gallery</span></h2>
+          <h2 className={indexStyle.headingLg}>Our Wroks</h2>
         </header>
         <ul className={indexStyle.gallery}>
           <li><img src="/images/photo01.jpg" width="426" height="418" alt="" /></li>
