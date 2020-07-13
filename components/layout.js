@@ -11,6 +11,7 @@ export default function Layout({ children, home }) {
       <Head>
         <link rel="icon" href="/profile_image_Apple.ico" />
         <meta name="description" content="hogehoge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
         <script src="js/script.js"></script>
       </Head>
