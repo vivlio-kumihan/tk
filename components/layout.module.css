@@ -17,8 +17,9 @@
 
 
 /* blog */
-.blogArticles {
-	margin-left: 22rem;
+.blogContainer {
+	width: 36rem;
+	margin: 0 auto;
 }
 
 .blogHeaderImage {
@@ -31,22 +32,22 @@
 	margin: 3rem 0 0;
 }
 
-#mainnav a{
-	color: #000;
+/* header navi */
+.mainNavUl {
+	display: flex;
+	justify-content: center;
+	margin: 2rem 0;
 }
 
-#mainImg{
-	position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 528px;
+.mainNavLi {
+	margin: 0 1rem;
 }
 
-#mainImg img{
-	position: absolute;
-  left: 50%;
-	max-width: 1280px;
-  width: 1280px;
-  height: 528px;
-  margin-left: -640px;
+
+.mainNavLi:before {
+  content: none;
+}
+
+.mainNavLi a {
+	color: rgba(80, 80, 80, 1);
 }

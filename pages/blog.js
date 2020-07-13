@@ -12,7 +12,7 @@ export default function Blog({ allPostsData }) {
   return (
     <Layout home>
       <Head>
-        <title>{siteTitle}</title>
+        <title>Nob Takahiro Blog</title>
       </Head>
       <Link href="/">
         <a>
@@ -36,7 +36,7 @@ export default function Blog({ allPostsData }) {
           Welcome my boring Blog...
         </p>
       </section>
-      <section className={layoutStyle.blogArticles}>
+      <section className={layoutStyle.blogContainer}>
         <h2 className="sectionTitle">Blog</h2>
         <ul>
           {allPostsData.map(({ id, date, title }) => (

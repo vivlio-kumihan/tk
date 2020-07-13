@@ -3,7 +3,7 @@ import Link from "next/link"
 import layoutStyle from "./layout.module.css"
 import utilStyle from "../styles/util.module.css"
 
-export const siteTitle = "Blog Kumihan.com"
+export const siteTitle = "西村印刷株式会社"
 
 export default function Layout({ children, home }) {
   return (
@@ -18,12 +18,20 @@ export default function Layout({ children, home }) {
         <div className={layoutStyle.headerLogo}>
             <img src="/images/logo.png" width="142" height="80" alt="logo" />
         </div>
-        <nav className={layoutStyle.mainnav}>
-          <ul>
-            <li><a href="#top">HOME</a></li>
-            <li><a href="#sec01">COMPANY</a></li>
-            <li><a href="#sec02">WORKS</a></li>
-            <li><a href="#sec02">ACCESS</a></li>
+        <nav>
+          <ul className={layoutStyle.mainNavUl}>
+            <li className={layoutStyle.mainNavLi}>
+              <a href="#top">HOME</a>
+            </li>
+            <li className={layoutStyle.mainNavLi}>
+              <a href="#sec01">COMPANY</a>
+            </li>
+            <li className={layoutStyle.mainNavLi}>
+              <a href="#sec02">WORKS</a>
+            </li>
+            <li className={layoutStyle.mainNavLi}>
+              <a href="#sec02">ACCESS</a>
+            </li>
           </ul>
         </nav>
       </header>
