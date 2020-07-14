@@ -1,6 +1,7 @@
 import Head from "next/head"
 import Link from "next/link"
 import Layout, { siteTitle } from "../components/layout"
+import utilStyle from "../styles/util.module.css"
 import indexStyle from "./index.module.css"
 
 export default function Home() {
@@ -19,7 +20,7 @@ export default function Home() {
         </div>
       </div>
       <div className={indexStyle.ourWork}>
-        <h2 className={indexStyle.headingLg}><span>Our Wroks</span></h2>
+        <h2 className={utilStyle.headingLg}><span>Our Wroks</span></h2>
         <div className={indexStyle.ourWorkImgs}>
           <div><img src="/images/photo01.jpg" alt="" /></div>
           <div><img src="/images/photo02.jpg" alt="" /></div>

@@ -9,3 +9,16 @@
 .lightText {
   color: rgba(153, 153, 153, 1)
 }
+
+.headingLg {
+	font-family: 'Fredericka the Great', cursive;
+  margin: 0 auto 40px;
+	text-align: center;
+	background: url(/images/borderBlack.png) repeat-x 0 50%;
+	background-size: 1px 1px;
+}
+
+.headingLg span {
+	background: #fff;
+	padding: 0 80px;
+}

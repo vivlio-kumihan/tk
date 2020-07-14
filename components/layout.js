@@ -22,16 +22,18 @@ export default function Layout({ children, home }) {
         <nav>
           <ul className={layoutStyle.mainNavUl}>
             <li className={layoutStyle.mainNavLi}>
-              <a href="#top">HOME</a>
+              <a href="/">HOME</a>
             </li>
             <li className={layoutStyle.mainNavLi}>
-              <a href="#sec01">COMPANY</a>
+              <Link href="/company">
+                <a>COMPANY</a>
+              </Link>
+            </li>       
+            <li className={layoutStyle.mainNavLi}>
+              <a href="/access">ACCESS</a>
             </li>
             <li className={layoutStyle.mainNavLi}>
-              <a href="#sec02">WORKS</a>
-            </li>
-            <li className={layoutStyle.mainNavLi}>
-              <a href="#sec02">ACCESS</a>
+              <a href="/blog">BLOG</a>
             </li>
           </ul>
         </nav>
@@ -49,34 +51,3 @@ export default function Layout({ children, home }) {
     </div>
   )
 }
-
-
-{/* <header className={layoutStyle.header}>
-  {home ? (
-    <div>
-      <img src="/images/profile.jpg"
-        className={`${layoutStyle.headerHomeImage} ${utilStyle.borderCircle}`}
-        alt={name} />
-      <h2>{name}</h2>
-    </div>
-  ) : (
-      <div>
-        <Link href="/">
-          <a>
-            <img src="/images/profile.jpg"
-              className={`${layoutStyle.headerImage} ${utilStyle.borderCircle}`}
-              alt={name} />
-          </a>
-        </Link>
-        <h3>
-          <Link href="/">
-            <a>{name}</a>
-          </Link>
-        </h3>
-        <style jsx>{`
-                h3 { font-weight: 900; }
-                a  { color: inherit; text-decoration: none; letter-spacing: -0.025rem; }
-              `}</style>
-      </div>
-    )}
-</header> */}
