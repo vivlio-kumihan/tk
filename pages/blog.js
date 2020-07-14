@@ -6,13 +6,13 @@ import utilStyle from "../styles/util.module.css"
 import { getSortedPostsData } from "../lib/posts"
 import Date from "../components/date"
 
-const name = "Nob Takahiro"
+const name = "TK"
 
 export default function Blog({ allPostsData }) {
   return (
     <Layout home>
       <Head>
-        <title>Nob Takahiro Blog</title>
+        <title>NoBlog</title>
       </Head>
       <Link href="/">
         <a>
@@ -31,7 +31,7 @@ export default function Blog({ allPostsData }) {
           Hello!
         </h1>
         <p className="catchCopy">
-          Hi, I'm Nob. I'm a DTP operator and photographer.
+          Hi, I'm Takahiro Nobuyuki. I'm a DTP operator and photographer.
           <br />
           Welcome my boring Blog...
         </p>

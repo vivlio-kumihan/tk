@@ -5,5 +5,25 @@
 }
 
 .flexItem {
+  margin: 0.1rem;
+  padding: 1rem;
   width: 20rem;
+  background-color: rgba(225, 250, 255, 0.5);
+  border-radius: 0.5rem;
+
+}
+
+.headingCompamy {
+  text-align: center;
+}
+.dtTitle {
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1rem;
+  color: rgba(30, 115, 190, 1);
+}
+
+.ddItem {
+  padding-top: 0.2rem;
+  line-height: 1.2rem;
 }
