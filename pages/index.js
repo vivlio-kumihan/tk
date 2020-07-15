@@ -12,13 +12,13 @@ export default function Home() {
       </Head>
 
       <div className={indexStyle.mainImg}>
-        <img src="/images/AdobeStock_108590062.png" alt="" />
+        <img src="/images/AdobeStock_108590062.png" alt="main image" />
       </div>
+
       <div className={indexStyle.catchCopy}>
-        <div>
-          <img src="/images/catch-copy.png" alt="catch copy" />
-        </div>
+        <img src="/images/catch-copy.png" alt="catch copy" />
       </div>
+
       <div className={indexStyle.ourWork}>
         <h2 className={utilStyle.headingLg}><span>Our Wroks</span></h2>
         <div className={indexStyle.ourWorkImgs}>

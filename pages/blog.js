@@ -3,6 +3,7 @@ import Link from "next/link"
 import Layout, { siteTitle } from "../components/layout"
 import layoutStyle from "../components/layout.module.css"
 import utilStyle from "../styles/util.module.css"
+import blogStyle from "./blog.module.css"
 import { getSortedPostsData } from "../lib/posts"
 import Date from "../components/date"
 
@@ -10,14 +11,14 @@ const name = "TK"
 
 export default function Blog({ allPostsData }) {
   return (
-    <Layout home>
+    <Layout>
       <Head>
         <title>NoBlog</title>
       </Head>
       <Link href="/">
         <a>
           <img src="/images/profile.jpg"
-            className={`${layoutStyle.blogHeaderImage} ${utilStyle.borderCircle}`}
+            className={`${blogStyle.blogHeaderImage} ${utilStyle.borderCircle}`}
             alt={name} />
         </a>
       </Link>
@@ -36,7 +37,7 @@ export default function Blog({ allPostsData }) {
           Welcome my boring Blog...
         </p>
       </section>
-      <section className={layoutStyle.blogContainer}>
+      <section className={blogStyle.blogContainer}>
         <h2 className="sectionTitle">Blog</h2>
         <ul>
           {allPostsData.map(({ id, date, title }) => (
@@ -58,6 +59,7 @@ export default function Blog({ allPostsData }) {
         </div>
       </section>
       <style jsx>{`
+
         .blogTitle {
           font-weight: 900;
           text-align: center;

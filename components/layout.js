@@ -10,44 +10,58 @@ export default function Layout({ children, home }) {
     <div className={layoutStyle.container}>
       <Head>
         <link rel="icon" href="/profile_image_Apple.ico" />
-        <meta name="description" content="hogehoge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-        <script src="js/script.js"></script>
+        <meta name="description" content="新規顧客獲得のため西村印刷株式会社の概要を説明するサイト" />
       </Head>
-      <header className={layoutStyle.header}>
+      <header className={layoutStyle.headerContents}>
         <div className={layoutStyle.headerLogo}>
           <img src="/images/nishipri-logo.png" width="500px" alt="logo" />
         </div>
-        <nav>
-          <ul className={layoutStyle.mainNavUl}>
-            <li className={layoutStyle.mainNavLi}>
-              <a href="/">HOME</a>
-            </li>
-            <li className={layoutStyle.mainNavLi}>
-              <Link href="/company">
-                <a>COMPANY</a>
-              </Link>
-            </li>       
-            <li className={layoutStyle.mainNavLi}>
-              <a href="/access">ACCESS</a>
-            </li>
-            <li className={layoutStyle.mainNavLi}>
-              <a href="/blog">BLOG</a>
-            </li>
-          </ul>
+        <nav className={layoutStyle.mainNav}>
+          <Link href="/">
+            <a>HOME</a>
+          </Link>
+          <Link href="/company">
+            <a>COMPANY</a>
+          </Link>
+          <Link href="/access">
+            <a>ACCESS</a>
+          </Link>
+          <Link href="/blog">
+            <a>BLOG</a>
+          </Link>
         </nav>
       </header>
-      <main>
+      <main className={layoutStyle.mainContents}>
         {children}
+        {!home && (
+          <div className={layoutStyle.backToHome}>
+            <Link href="/">
+              <a>← Back to Home</a>
+            </Link>
+          </div>
+        )}
       </main>
-      {!home && (
-        <div className={layoutStyle.backToHome}>
-          <Link href="/">
-            <a>← Back to Home</a>
-          </Link>
-        </div>
-      )}
     </div>
   )
 }
+
+
+{/* <nav>
+  <ul className={layoutStyle.mainNavUl}>
+    <li>
+      <a href="/">HOME</a>
+    </li>
+    <li>
+      <Link href="/company">
+        <a>COMPANY</a>
+      </Link>
+    </li>
+    <li>
+      <a href="/access">ACCESS</a>
+    </li>
+    <li>
+      <a href="/blog">BLOG</a>
+    </li>
+  </ul>
+</nav> */}

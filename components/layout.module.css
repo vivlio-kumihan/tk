@@ -2,10 +2,10 @@
 
 .container {
 	width: 100%;
-	margin: 0rem auto 6rem;
+	margin: 0 auto;
 }
 
-.header {
+.headerContents {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -15,39 +15,26 @@
 	margin-top: 3rem;
 }
 
-
-/* blog */
-.blogContainer {
-	width: 36rem;
+/* main */
+.mainContents {
+	width: 95%;
 	margin: 0 auto;
-}
-
-.blogHeaderImage {
-	margin: 0 auto;
-	width: 6rem;
-	width: 6rem;
-}
-
-.backToHome {
-	margin: 3rem 0 0;
 }
 
 /* header navi */
-.mainNavUl {
+.mainNav {
 	display: flex;
 	justify-content: center;
 	margin: 2rem 0;
 }
 
-.mainNavLi {
+.mainNav a {
 	margin: 0 1rem;
-}
-
-
-.mainNavLi:before {
-  content: none;
-}
-
-.mainNavLi a {
+	font-weight: 400;
 	color: rgba(80, 80, 80, 1);
+}
+
+/* common parts */
+.backToHome {
+	margin: 3rem 0;
 }
