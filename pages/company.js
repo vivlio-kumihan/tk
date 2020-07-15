@@ -48,7 +48,7 @@ export default function Company() {
         </div>
         <div className={companyStyle.flexItem}>
           <dt className={companyStyle.dtTitle}>役員名</dt>
-          <dd className={companyStyle.ddItem}>代表取締役　西村保宏<br />取締役　西村紀男　　取締役　西村圭子</dd>
+          <dd className={companyStyle.ddItem}>代表取締役　西村保宏<br />取締役　西村紀男<br />取締役　西村圭子</dd>
         </div>
         <div className={companyStyle.flexItem}>
           <dt className={companyStyle.dtTitle}>年間取引高</dt>
