@@ -11,8 +11,7 @@ export default function Company() {
         <title>会社概要</title>
       </Head>
       <h2 className={utilStyle.headingLg}><span>Company</span></h2>
-
-      <h4 className={companyStyle.headingCompamy}>会社概要</h4>
+      <h4 className={utilStyle.textCenter}>会社概要</h4>
       <dl className={companyStyle.flexContainer}>
         <div className={companyStyle.flexItem}>
           <dt className={companyStyle.dtTitle}>会社名</dt>
