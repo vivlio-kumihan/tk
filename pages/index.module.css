@@ -1,4 +1,10 @@
 .mainImg{
+}
+
+.mainImg img{
+}
+
+/* .mainImg{
 	position: relative;
   overflow: hidden;
   width: 100%;
@@ -12,12 +18,15 @@
   width: 1280px;
   height: 528px;
   margin-left: -640px;
-}
+} */
 
 .catchCopy {
-	margin: 2rem auto;
-	width: 600px;
 }
+
+/* .catchCopy {
+	margin: 2rem 5rem;
+	width: 40rem;
+} */
 
 .ourWork {
 	margin: 0 2rem;
