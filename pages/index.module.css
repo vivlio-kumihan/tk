@@ -1,26 +1,11 @@
 .mainImg{
+	margin: 0 auto;
+	width: 100%;
 }
-
-.mainImg img{
-}
-
-/* .mainImg{
-	position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 480px;
-}
-
-.mainImg img{
-	position: absolute;
-  left: 50%;
-	max-width: 1280px;
-  width: 1280px;
-  height: 528px;
-  margin-left: -640px;
-} */
 
 .catchCopy {
+	margin: 2rem auto;
+	width: 24rem;
 }
 
 /* .catchCopy {

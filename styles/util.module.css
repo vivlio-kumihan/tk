@@ -12,7 +12,8 @@
 
 .headingLg {
 	font-family: 'Fredericka the Great', cursive;
-  margin: 0 auto 40px;
+	margin: 0 auto 40px;
+	font-size: 1.4rem;
 	text-align: center;
 	background: url(/images/borderBlack.png) repeat-x 0 50%;
 	background-size: 1px 1px;
@@ -20,7 +21,7 @@
 
 .headingLg span {
 	background: #fff;
-	padding: 0 80px;
+	padding: 0 20px;
 }
 
 .textCenter {
