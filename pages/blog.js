@@ -45,7 +45,6 @@ export default function Blog({ allPostsData }) {
               <Link href="/posts/[id]" as={`/posts/${id}`}>
                 <a>{title}</a>
               </Link><br />
-              {/* {id}<br /> ファイル名はいらないからコメントアウトする。*/}
               <div className="indexListDate">
                 <Date dateString={date} />
               </div>
