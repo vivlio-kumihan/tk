@@ -27,9 +27,9 @@ export default function Layout({ children, home }) {
           <Link href="/access">
             <a>ACCESS</a>
           </Link>
-          <Link href="/blog">
+          {/* <Link href="/blog">
             <a>BLOG</a>
-          </Link>
+          </Link> */}
         </nav>
       </header>
       <main className={layoutStyle.mainContents}>
