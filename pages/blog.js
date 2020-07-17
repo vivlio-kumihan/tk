@@ -32,9 +32,10 @@ export default function Blog({ allPostsData }) {
           Hello!
         </h1>
         <p className="catchCopy">
-          Hi, I'm Takahiro Nobuyuki. I'm a DTP operator and photographer.
-          <br />
-          Welcome my boring Blog...
+          Hi, I'm Takahiro Nobuyuki. I'm a DTP operator and photographer.<br />
+          This blog is editing MarkDown to HTML. Just deploy layout sample.
+          {/* <br />
+          Welcome my boring Blog... */}
         </p>
       </section>
       <section className={blogStyle.blogContainer}>
@@ -46,16 +47,13 @@ export default function Blog({ allPostsData }) {
                 <a>{title}</a>
               </Link><br />
               <div className="indexListDate">
-                <Date dateString={date} />
+                {/* ERROOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOR */}
+                {/* <Date dateString={date} /> */}
+                <p>{date}</p>
               </div>
             </li>
           ))}
         </ul>
-        <div className={layoutStyle.backToHome}>
-          <Link href="/">
-            <a>← Back to Home</a>
-          </Link>
-        </div>
       </section>
       <style jsx>{`
 

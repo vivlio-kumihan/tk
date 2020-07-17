@@ -2,6 +2,7 @@ import Layout from "../../components/layout"
 import layoutStyle from "../../components/layout.module.css"
 import { getAllPostIds, getPostData } from "../../lib/posts"
 import Head from "next/head"
+import Link from "next/link"
 import Date from "../../components/date"
 
 export default function Post({ postData }) {
@@ -24,6 +25,11 @@ export default function Post({ postData }) {
         {/* {postData.date}<br />  this is origin code. under one replace code. */}
         <Date dateString={postData.date} />
         <div dangerouslySetInnerHTML={{__html: postData.contentHtml}} />
+        <div className={layoutStyle.backToHome}>
+          <Link href="/blog">
+            <a>← Back to Blog Index</a>
+          </Link>
+        </div>
       </div>
     </Layout>
   )
