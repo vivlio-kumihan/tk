@@ -45,23 +45,3 @@ export default function Layout({ children, home }) {
     </div>
   )
 }
-
-
-{/* <nav>
-  <ul className={layoutStyle.mainNavUl}>
-    <li>
-      <a href="/">HOME</a>
-    </li>
-    <li>
-      <Link href="/company">
-        <a>COMPANY</a>
-      </Link>
-    </li>
-    <li>
-      <a href="/access">ACCESS</a>
-    </li>
-    <li>
-      <a href="/blog">BLOG</a>
-    </li>
-  </ul>
-</nav> */}
