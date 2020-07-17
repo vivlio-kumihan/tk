@@ -9,7 +9,7 @@ export default function Layout({ children, home }) {
   return (
     <div className={layoutStyle.container}>
       <Head>
-        <link rel="icon" href="/profile_image_Apple.ico" />
+        <link rel="icon" href="/nishimura-logo.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="新規顧客獲得のため西村印刷株式会社の概要を説明するサイト" />
       </Head>
