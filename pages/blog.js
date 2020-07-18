@@ -7,7 +7,7 @@ import blogStyle from "./blog.module.css"
 import { getSortedPostsData } from "../lib/posts"
 import Date from "../components/date"
 
-const name = "TK"
+const name = "BLOG SAMPLE PAGE"
 
 export default function Blog({ allPostsData }) {
   return (
@@ -17,7 +17,7 @@ export default function Blog({ allPostsData }) {
       </Head>
       <Link href="/">
         <a>
-          <img src="/images/profile.jpg"
+          <img src="/images/nishimura-logo.jpg"
             className={`${blogStyle.blogHeaderImage} ${utilStyle.borderCircle}`}
             alt={name} />
         </a>
@@ -32,10 +32,8 @@ export default function Blog({ allPostsData }) {
           Hello!
         </h1>
         <p className="catchCopy">
-          Hi, I'm Takahiro Nobuyuki. I'm a DTP operator and photographer.<br />
-          This blog is editing MarkDown to HTML. Just deploy layout sample.
-          {/* <br />
-          Welcome my boring Blog... */}
+          Here is Blog App sample page.<br />
+          This app is editing MarkDown to HTML.
         </p>
       </section>
       <section className={blogStyle.blogContainer}>
