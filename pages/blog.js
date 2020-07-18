@@ -13,7 +13,7 @@ export default function Blog({ allPostsData }) {
   return (
     <Layout>
       <Head>
-        <title>NoBlog</title>
+        <title>Sample Blog App</title>
       </Head>
       <Link href="/">
         <a>
