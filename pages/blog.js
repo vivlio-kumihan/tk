@@ -45,9 +45,8 @@ export default function Blog({ allPostsData }) {
                 <a>{title}</a>
               </Link><br />
               <div className="indexListDate">
-                {/* ERROOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOR */}
-                {/* <Date dateString={date} /> */}
-                <p>{date}</p>
+                <Date dateString={date} />
+                {/* <p>{date}</p> */}
               </div>
             </li>
           ))}
