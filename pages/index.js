@@ -21,8 +21,10 @@ export default function Home() {
       <div className={indexStyle.ourWork}>
         <h2 className={utilStyle.headingLg}><span>Our Wroks</span></h2>
         <div className={indexStyle.ourWorkImgs}>
+          <div><img src="/images/img_nishipri_brochure_cover4.jpg" alt="" /></div>
           <div><img src="/images/img_obamj_covers1.jpg" alt="" /></div>
           <div><img src="/images/img_obamj_covers2.jpg" alt="" /></div>
+          <div><img src="/images/img_nishipri_brochure_cover5.jpg" alt="" /></div>
           <div><img src="/images/img_nishipri_brochure_cover2.jpg" alt="" /></div>
           <div><img src="/images/img_nishipri_brochure_cover3.jpg" alt="" /></div>
           <div><img src="/images/img_book_cover1.jpg" alt="" /></div>
