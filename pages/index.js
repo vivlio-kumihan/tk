@@ -27,8 +27,8 @@ export default function Home() {
           <div><img src="/images/img_nishipri_brochure_cover5.jpg" alt="" /></div>
           <div><img src="/images/img_nishipri_brochure_cover2.jpg" alt="" /></div>
           <div><img src="/images/img_nishipri_brochure_cover3.jpg" alt="" /></div>
-          <div><img src="/images/img_book_cover1.jpg" alt="" /></div>
           <div><img src="/images/img_nishipri_brochure_cover1.jpg" alt="" /></div>
+          <div><img src="/images/img_book_cover1.jpg" alt="" /></div>
           <div><img src="/images/img_books.jpg" alt="" /></div>
         </div>
       </div>      
