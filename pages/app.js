@@ -1,5 +1,5 @@
 import Layout, { siteTitle } from "../components/layout"
-import {greetHello} from "../lib/app"
+import {greetHello} from "../lib/util"
 
 
 export default function myApp() {
