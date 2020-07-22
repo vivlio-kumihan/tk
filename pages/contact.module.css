@@ -1,0 +1,25 @@
+.container {
+	width: 40rem;
+	margin: 0 auto;
+}
+
+.inputSpace {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: solid 1px  rgba(80, 80, 80, 0.5);
+  border-radius: 0.3rem;
+}
+
+.button {
+  margin-top: 0.8rem;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  font-family: "M PLUS 1p";
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: white;
+  background-color :rgba(15, 140, 235, 1);
+  text-align: center;
+  border: none;
+  border-radius: 0.3rem;
+  box-shadow: rgba(80, 80, 80, 0.5);
+}

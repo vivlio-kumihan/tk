@@ -27,6 +27,9 @@ export default function Layout({ children, home }) {
           <Link href="/access">
             <a>ACCESS</a>
           </Link>
+          <Link href="/contact">
+            <a>CONTACT</a>
+          </Link>
           <Link href="/blog">
             <a>BLOG</a>
           </Link>
