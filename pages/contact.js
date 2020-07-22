@@ -1,6 +1,10 @@
 import { useState } from 'react';
 import Router from 'next/router';
 
+// Simple HTML form for your website
+// Create Access Key
+// https://www.staticforms.xyz/
+
 const Contact = () => {
   const [contact, setContact] = useState({
     name: '',
