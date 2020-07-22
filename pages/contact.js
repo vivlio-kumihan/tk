@@ -121,8 +121,8 @@ export default function Contact() {
               />
             </div>
           </div>
+          <button className={contactStyle.button} type="submit">上記内容で問い合わせをする。</button>
         </form>
-        <button className={contactStyle.button} type="submit">上記内容で問い合わせをする。</button>
       </div>
     </Layout>
   )
