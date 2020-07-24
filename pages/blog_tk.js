@@ -1,23 +1,22 @@
 import Head from "next/head"
 import Link from "next/link"
-import Layout, { siteTitle } from "../components/layout"
-import layoutStyle from "../components/layout.module.css"
+import Layout from "../components/layout"
 import utilStyle from "../styles/util.module.css"
 import blogStyle from "./blog.module.css"
-import { getSortedPostsData } from "../lib/posts"
+import { getSortedPostsData } from "../lib/tkPosts"
 import Date from "../components/date"
 
-const name = "BLOG SAMPLE PAGE"
+const name = "Takahiro Nobuyuki"
 
 export default function Blog({ allPostsData }) {
   return (
     <Layout>
       <Head>
-        <title>Sample Blog App</title>
+        <title>高広のブログ</title>
       </Head>
       <Link href="/">
         <a>
-          <img src="/images/nishimura-logo.jpg"
+          <img src="/images/profile.jpg"
             className={`${blogStyle.blogHeaderImage} ${utilStyle.borderCircle}`}
             alt={name} />
         </a>
@@ -32,8 +31,8 @@ export default function Blog({ allPostsData }) {
           Hello!
         </h1>
         <p className="catchCopy">
-          Here is Blog App sample page.<br />
-          This app is editing MarkDown to HTML.
+          Hi, I'm Takahiro.<br />
+          Prepress Designer, Photograper
         </p>
       </section>
       <section className={blogStyle.blogContainer}>
@@ -41,7 +40,7 @@ export default function Blog({ allPostsData }) {
         <ul>
           {allPostsData.map(({ id, date, title }) => (
             <li className="indexLi" key={id}>
-              <Link href="/posts/[id]" as={`/posts/${id}`}>
+              <Link href="/postsTk/[id]" as={`/postsTk/${id}`}>
                 <a>{title}</a>
               </Link><br />
               <div className="indexListDate">
