@@ -1,12 +1,11 @@
 ---
-title: "Birds"
+title: "運動と鳥を撮ること"
 date: "2020-07-19"
-tag: "開発"
+tag: "趣味"
 ---
 
----
+ウォーキングがてらさくら近隣公園で鳥を撮る。往復2時間弱。休日の良い運動を見つけた。
 
-### Free as a bird, It's next things to be
+習慣にしようと思う。
 
-![birds1](/images/200719_1113336.jpg "birds")
-![birds2](/images/200719_1112810.jpg "birds")
+[birds](/images/200719_1113336.jpg)

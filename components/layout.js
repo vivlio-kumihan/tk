@@ -30,9 +30,9 @@ export default function Layout({ children, home }) {
           <Link href="/contact">
             <a>CONTACT</a>
           </Link>
-          <Link href="/blog">
-            <a>BLOG</a>
-          </Link>
+          {/* <Link href="/blog"> */}
+            {/* <a>BLOG</a> */}
+          {/* </Link> */}
         </nav>
       </header>
       <main className={layoutStyle.mainContents}>
