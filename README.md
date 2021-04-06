@@ -1,10 +1,4 @@
 # Next.js gh-pages Hello World example
-# Next.js gh-pages Hello World example
-# Next.js gh-pages Hello World example
-# Next.js gh-pages Hello World example
-# Next.js gh-pages Hello World example
-# Next.js gh-pages Hello World example
-# Next.js gh-pages Hello World example
 
 This repository is a gh-pages example built with Next.js
 
