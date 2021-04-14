@@ -1,15 +1,6 @@
-@media print {
-  body {
-    background-color: wheat;
-  }
-}
-
-@media screen {
-  body {
-    background-color: royalblue;
-    color: seashell;
-  }
-}
-
 body {
+  background-color: royalblue;
+  color: seashell;
 }
+
+@import url("./print.css") print;
