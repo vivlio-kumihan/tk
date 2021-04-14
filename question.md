@@ -27,3 +27,24 @@ $ -bash: start-viewer: command not found
 
 どう対応すればよろしいでしょうか？
 よろしくお願いいたします。
+
+## 村上さんの答え
+
+`bash`ではスクリプトのファイル名だけでなくディレクトリ・パスも付ける必要があるからです。
+コマンドプロンプトに`./start-webserver`と入力する必要があります。
+
+ただし、制作作業にVivliostyleを使うにはこれよりも[Vivliostyle CLI](https://docs.vivliostyle.org/#/ja/vivliostyle-cli)を使う方が便利だと思います。
+
+
+
+```
+npm install -g @vivliostyle/cli
+```
+
+により`Vivliostyle CLI`をインストールすると`vivliostyle`コマンドが使えるようになります。 HTMLファイル`index.html`を`Vivliostyle`で表示するには、
+
+```
+vivliostyle preview index.html
+```
+とします。そうすると、`Vivliostyle Viewer`でHTMLファイルが表示されます。
+HTMLやCSSを編集して更新すると更新した結果をすぐに確認できます。
