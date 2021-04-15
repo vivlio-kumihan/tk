@@ -1,4 +1,17 @@
 body {
-    background-color: wheat;
+    /* margin: -3mm;
+    padding: 6mm; */
+    background-color: white;
     color: brown;
+    /* border: solid brown; */
 }
+
+@page {
+    size: JIS-B5;
+    marks: crop cross;
+    bleed: 3mm;
+    margin: -3mm;
+    padding: 10mm;
+    border: solid brown;
+}
+
