@@ -1,5 +1,3 @@
-#### 210414
-
 ## 『CSSページ組版入門』での質問
 
 > 環境
@@ -7,6 +5,8 @@
 > node v14.2.0
 
 ### Vivlio ViewerではなくVivlio CLIで学習を進める準備をする
+
+#### 210414
 
 #### 質問）
 
@@ -40,7 +40,7 @@ $ -bash: start-viewer: command not found
 ただし、制作作業にVivliostyleを使うにはこれよりも[Vivliostyle CLI](https://docs.vivliostyle.org/#/ja/vivliostyle-cli)を使う方が便利だと思います。
 
 ```
-npm install -g @vivliostyle/cli
+$ npm install -g @vivliostyle/cli
 ```
 
 により`Vivliostyle CLI`をインストールすると`vivliostyle`コマンドが使えるようになります。 HTMLファイル`index.html`を`Vivliostyle`で表示するには、
@@ -52,6 +52,8 @@ $ vivliostyle preview index.html
 HTMLやCSSを編集して更新すると更新した結果をすぐに確認できます。
 
 ---
+
+#### 210418
 
 #### 質問）
 
@@ -132,6 +134,8 @@ $ npm update -g @vivliostyle/cli
 
 ---
 
+#### 210418
+
 #### 質問）
 
 『CSSページ組版入門』P1・P98〜を参照しました。
@@ -194,7 +198,9 @@ Indesignの文字組みを赤色に着色しレイアウトに重ねたものを
 
 ## 村上さんの回答
 
-Chromeブラウザの行送りは1px単位で行われるという問題があります。line-height をpx単位に変換した値の端数は切り捨てられるために、指定したline-heightよりも行送りが小さくなります。そのために、ページに入る行数が多くなります。
-line-height: 6mm の場合、px単位に変換すると 22.677px です。この端数が切り捨てられて行送り量は 22px になります。mm単位に直すと5.82mmです。このため6mmの行送りならば36行入る領域に、実際は5.82mmの行送りになるので1行多い37行入ってしまう、ということが起きます。
-この問題の回避策としては、px単位の整数倍の line-height を使うことです。line-height: 23px など。
+Chromeブラウザの行送りは1px単位で行われるという問題があります。
+`line-height` を`px`単位に変換した値の端数は切り捨てられるために、指定した `line-height` よりも行送りが小さくなります。そのために、ページに入る行数が多くなります。
 
+`line-height: 6mm` の場合、`px`単位に変換すると 22.677px です。この端数が切り捨てられて行送り量は 22px になります。`mm`単位に直すと5.82mmです。このため6mmの行送りならば36行入る領域に、実際は5.82mmの行送りになるので1行多い37行入ってしまう、ということが起きます。
+
+この問題の回避策としては、`px`単位の整数倍の `line-height` を使うことです。`line-height: 23px` など。

@@ -1,5 +1,64 @@
 @page {
     size: 182mm 257mm;
+    margin: 30mm 28mm 23mm 28mm;
+    /* marks: crop cross; */
+    bleed: 3mm;
+    @bottom-center {
+        margin-top: 6mm;
+        padding-bottom: 12mm;
+        content: "— " counter(page) " —";
+        font-size: 3.25mm;
+        font-family: YuMin_36pKn-Medium;
+    }
+}
+
+/* @page Chapter:right {
+    margin: 30mm 7mm 23mm 35mm;
+        @top-right-corner {
+        margin: -3mm -3mm 12mm -161mm;
+        padding: 13mm 17.5mm 0mm 0mm;
+        content: "Hello Vivliostyle!";
+        font-size: 3.25mm;
+        font-family: YuMin_36pKn-Medium;
+        text-align: right;
+        color: rgba(255, 255, 255, 1);
+        background-color: teal;
+        border-bottom: 0.6mm solid tomato;
+    }
+}
+
+@page Chapter:left {
+    margin: 30mm 28mm 23mm 14mm;
+    @top-left-corner {
+        margin: -3mm -3mm 161mm 12mm;
+        padding: 13mm 17.5mm 0mm 0mm;
+        content: "Here is left page!";
+        font-size: 3.25mm;
+        font-family: YuMin_36pKn-Medium;
+        text-align: right;
+        color: rgba(255, 255, 255, 1);
+        background-color: teal;
+        border-bottom: 0.6mm solid tomato;
+    }
+} */
+
+body {
+    margin: 0mm 0mm;
+    padding: 0mm 0mm;
+    color:black;
+    background-color:rgba(0, 0, 0, 0.1);
+}
+
+p {
+    margin: 0em;
+    font-family: YuMin_36pKn-Medium;
+    font-size: 3.5mm;
+    line-height: 6mm;
+    text-align:justify;
+}
+
+/* @page {
+    size: 182mm 257mm;
     marks: crop cross;
     bleed: 3mm;
     margin: 30mm 21mm 23mm;
@@ -21,20 +80,4 @@
         font-size: 3.25mm;
         font-family: YuMin_36pKn-Medium;
     }
-}
-
-body {
-    margin: 0mm 0mm;
-    padding: 0mm 0mm;
-    color:black;
-    background-color:rgba(0, 0, 0, 0.1);
-}
-
-p {
-    margin: 0em;
-    font-family: YuMin_36pKn-Medium;
-    font-size: 3.5mm;
-    line-height: 6mm;
-    text-align:justify;
-}
-
+} */
