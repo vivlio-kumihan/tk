@@ -1,4 +1,29 @@
 @page {
+    @top-right {
+        content: string(Chapter) "－ " counter(page);
+    }
+}
+
+h1::before {
+    counter-increment: ChapterNo;
+    content: "第" counter(ChapterNo) ". ";
+}
+
+h1 {
+    string-set: Chapter content(before) content();
+    counter-reset: SectionNo;
+}
+
+h2::before {
+    counter-increment: SectionNo;
+    content: "第" counter(SectionNo) ". ";
+}
+
+h2 {
+    string-set: Section content(before) content();
+}
+
+/* @page {
     size: 182mm 257mm;
     margin: 30mm 28mm 23mm 28mm;
     /* marks: crop cross; */
@@ -43,6 +68,7 @@
 } */
 
 body {
+    counter-reset: ChapterNo;
     margin: 0mm 0mm;
     padding: 0mm 0mm;
     color:black;
