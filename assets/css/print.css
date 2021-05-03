@@ -1,0 +1,98 @@
+@page {
+    size: 182mm 257mm;
+    marks: crop cross;
+    bleed: 3mm;
+    margin: 30mm 21mm 23mm;    
+    @bottom-center {
+        margin-top: 6mm;
+        padding-bottom: 12mm;
+        content: "— " counter(page) " —";
+        font-size: 3.25mm;
+        font-family: YuMin_36pKn-Medium;
+    }
+}
+
+@page Page:left {
+    background-color: aqua;
+    @top-left-corner {
+        margin: -3mm -167mm 12mm -3mm;
+        padding: 13mm 0mm 3mm 24.5mm;
+        content: string(Chapter);
+        font-size: 3.25mm;
+        font-family: YuMin_36pKn-Medium;
+        text-align: left;
+        color: rgba(255, 255, 255, 1);
+        background-color: teal;
+        border-bottom: 0.6mm solid tomato;
+    }      
+}
+
+@page Chapter:right {
+    @top-right-corner {
+        margin: -3mm -3mm 12mm -167mm;
+        padding: 13mm 24.5mm 3mm 0mm;
+        content: string(Section);
+        font-size: 3.25mm;
+        font-family: YuMin_36pKn-Medium;
+        text-align: right;
+        color: rgba(255, 255, 255, 1);
+        background-color: teal;
+        border-bottom: 0.6mm solid tomato;
+    }
+}
+
+h1::before {
+    counter-increment: ChapterNo;
+    content: "第" counter(ChapterNo) "章" "\0020";
+}
+
+h1 {
+    string-set: Chapter content(before) content();
+    counter-reset: SectionNo;
+}
+
+h2::before {
+    counter-increment: SectionNo;
+    content: url("./assets/img/noun_Plant_1963881.png") "第" counter(SectionNo) "節" open-quote;
+}
+
+h2::after {
+    content: close-quote "（" counter(SectionNo) "）";
+}
+
+h2 {
+    string-set: Section content(before) content() counter(SectionNo);
+    quotes: "『" "』"; 
+    counter-reset: SubsectionNo;
+}
+
+h3::before {
+    counter-increment: SubsectionNo;
+    content: attr(prefix) "\0020" open-quote;
+}
+
+h3 {
+    string-set: Subsection content(before) content() counter(SubsectionNo);
+    quotes: "「" "」"; 
+}
+
+h3::after {
+    content: close-quote "（" counter(SubsectionNo) "）";
+}
+
+body {
+    counter-reset: ChapterNo;
+    margin: 0mm 0mm;
+    padding: 0mm 0mm;
+    color:black;
+    background-color:rgba(0, 0, 0, 0.1);
+}
+
+p {
+    margin: 0em;
+    font-family: YuMin_36pKn-Medium;
+    font-size: 3.5mm;
+    line-height: 6mm;
+    text-align:justify;
+}
+
