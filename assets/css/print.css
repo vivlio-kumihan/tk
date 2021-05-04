@@ -1,0 +1,148 @@
+@page {
+    size: 182mm 257mm;
+    /* marks: crop cross; */
+    bleed: 3mm;
+    margin-top: 30mm;
+    margin-bottom: 23mm;
+    @bottom-center {
+        margin-top: 6mm;
+        padding-bottom: 12mm;
+        content: "— " counter(page) " —";
+        font-size: 3.25mm;
+        font-family: YuMin_36pKn-Medium;
+    }
+}
+
+@page :left {
+    margin-right:  14mm;
+    margin-left:  28mm;    
+    @top-left-corner {
+        margin: -3mm -167mm 12mm -3mm;
+        padding: 13mm 0mm 0mm 24.5mm;
+        content: string(Chapter);
+        font-size: 3.25mm;
+        font-family: YuMin_36pKn-Medium;
+        text-align: left;
+        color: rgba(255, 255, 255, 1);
+        background-color: teal;
+        border-bottom: 0.6mm solid tomato;
+    }    
+    @left-top {
+        content: "hello";
+        background-color: bisque;
+    }
+    @left-middle {
+        background-color: forestgreen;
+        content: element(hashira);
+    }
+    @left-bottom {
+        content: "hello";
+        background-color: aquamarine;
+    }
+}
+
+h5.Hashira {
+    position: running(hashira);
+}
+
+@page :right {
+    margin-right:  28mm;
+    margin-left:  14mm;  
+    @top-right-corner {
+        margin: -3mm -3mm 12mm -167mm;
+        padding: 13mm 24.5mm 0mm 0mm;
+        content: string(Section, start);
+        font-size: 3.25mm;
+        font-family: YuMin_36pKn-Medium;
+        text-align: right;
+        color: rgba(255, 255, 255, 1);
+        background-color: teal;
+        border-bottom: 0.6mm solid tomato;
+    }
+    @right-top {
+        content: "hello";
+    }
+    @right-middle {
+        content: "hello";
+    }
+    @right-bottom {
+        content: "hello";
+    }
+}
+
+h1::before {
+    counter-increment: ChapterNo;
+    content: "第" counter(ChapterNo) "章" "\0020";
+}
+
+h1 {
+    string-set: Chapter content(before) content();
+    counter-reset: SectionNo;
+}
+
+h2::before {
+    counter-increment: SectionNo;
+    content: "第" counter(SectionNo) "節" "\0020" open-quote;
+    /* urlが効かない。 */
+    /* content: url("./assets/img/noun_Plant_1963881.png") "第" counter(SectionNo) "節" open-quote; */
+}
+
+h2::after {
+    /* 多分バグ。close-quoteが小口のテキストに反映しない。 */
+    /* content: close-quote; */
+    content: "』";
+}
+
+h2 {
+    /* string-set: Section content(); */
+    string-set: Section content(before) content() content(after);
+    quotes: "『" "』"; 
+    counter-reset: SubsectionNo;
+}
+
+h3::before {
+    counter-increment: SubsectionNo;
+    content: attr(prefix) "\0020" open-quote;
+}
+
+h3::after {
+    content: close-quote;
+}
+
+h3 {
+    string-set: Subsection content(before) content();
+    quotes: "「" "」"; 
+}
+
+h4::before {
+    counter-increment: SubsubsectionNo;
+    content: attr(prefix) "\0020" open-quote;
+}
+
+h4::after {
+    content: close-quote;
+}
+
+h4 {
+    string-set: Subsubsection content(before) content();
+    quotes: "【" "】"; 
+}
+
+
+
+body {
+    counter-reset: ChapterNo;
+    margin: 0mm 0mm;
+    padding: 0mm 0mm;
+    color:black;
+    background-color:rgba(0, 0, 0, 0.1);
+}
+
+p {
+    margin: 0em;
+    font-family: YuMin_36pKn-Medium;
+    font-size: 3.5mm;
+    line-height: 6mm;
+    text-align:justify;
+}
+
