@@ -1,0 +1,56 @@
+@page {
+    @top-center {
+        content: "hello";
+        /* content: element(heading); */
+        background-color: forestgreen;
+    }
+}
+    
+p.rh { 
+  position: running(heading); 
+}
+  
+p.rh::before { 
+  content: counter(page) ' / '; 
+}
+
+/* @page {
+    size: 182mm 257mm;
+    bleed: 3mm;
+    margin: 30mm 21mm 23mm;
+    @top-center {
+        content: element(Title); 
+        background-color: forestgreen;
+    }
+    @bottom-center {
+        margin-top: 6mm;
+        padding-bottom: 12mm;
+        content: "— " counter(page) " —";
+        font-size: 3.25mm;
+        font-family: YuMin_36pKn-Medium;
+    }
+}
+    
+p.Title { 
+  position: running(Title); 
+}
+  
+p.Title::before { 
+  content: counter(page) ' / '; 
+}
+
+body {
+    counter-reset: ChapterNo;
+    margin: 0mm 0mm;
+    padding: 0mm 0mm;
+    color:black;
+    background-color:rgba(0, 0, 0, 0.1);
+}
+
+p {
+    margin: 0em;
+    font-family: YuMin_36pKn-Medium;
+    font-size: 3.5mm;
+    line-height: 6mm;
+    text-align:justify;
+} */

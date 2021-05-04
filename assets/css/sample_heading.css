@@ -1,7 +1,6 @@
 /* サンプルの見出し01 */
 
-h5 {
-    /* 相対的 */
+/* h5 {
     position: relative;
     padding: 0 .5em .5em 2em;
     border-bottom: 1px solid #B61C2C;
@@ -9,7 +8,6 @@ h5 {
 
 h5::before,
 h5::after {
-    /* 絶対的 */
     position: absolute;
     content: '';
     border-radius: 100%
@@ -30,4 +28,4 @@ h5::after {
     width: 13px;
     height: 13px;
     background: rgba(182, 28, 44, .5);
- }
+ } */

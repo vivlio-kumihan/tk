@@ -202,6 +202,156 @@ line-height: 6mm の場合、px単位に変換すると 22.677px です。この
 
 #### 質問）
 
+> 環境
+> MacOS 11.2.3
+> node v14.2.0
+
+【コード】　https://github.com/vivlio-kumihan/vivlio-kumihan
+
+## 『CSSページ組版入門』での質問
+
+【P91】18.1 欧文ページデザインを参照して、左右ページで小口・ノドの値を変えたレイアウトをやりたいです。
+
+【P105】を参照してコードを書きましたが反映されません。
+
+どう対処すればよろしいでしょうかご教示ください。よろしくお願い致します。
+
+### ./assets/css/print.css
+
+```css
+@page {
+    size: 182mm 257mm;
+    marks: crop cross;
+    bleed: 3mm;
+    margin: 30mm 21mm 23mm;    
+    @bottom-center {
+        margin-top: 6mm;
+        padding-bottom: 12mm;
+        content: “— ” counter(page) ” —“;
+        font-size: 3.25mm;
+        font-family: YuMin_36pKn-Medium;
+    }
+}
+
+@page Chapter:left {
+    @top-left-corner {
+        margin: -3mm -167mm 12mm -3mm;
+        padding: 13mm 0mm 3mm 24.5mm;
+        content: string(Chapter);
+        font-size: 3.25mm;
+        font-family: YuMin_36pKn-Medium;
+        text-align: left;
+        color: rgba(255, 255, 255, 1);
+        background-color: teal;
+        border-bottom: 0.6mm solid tomato;
+    }      
+}
+
+@page Chapter:right {
+    @top-right-corner {
+        margin: -3mm -3mm 12mm -167mm;
+        padding: 13mm 24.5mm 3mm 0mm;
+        content: string(Section);
+        font-size: 3.25mm;
+        font-family: YuMin_36pKn-Medium;
+        text-align: right;
+        color: rgba(255, 255, 255, 1);
+        background-color: teal;
+        border-bottom: 0.6mm solid tomato;
+    }
+}
+```
+
+## hidarumaさんのRes
+
+設定を記述した名前付きページを適用するには95ページにあるように、明示的に指定する必要があります。名前を付けたChapterはHTML内に登場するCSSのpageプロパティから呼ばれているでしょうか？
+
+## 高広の反応
+
+回答の意味がわからなかったです。。。大変申し訳ありませんでした。
+
+そこで改めて調べてみました。
+
+[CSS Paged Media Module Level 3 / 4.2.1. Spread pseudo-classes: :left, :right](https://drafts.csswg.org/css-page-3/#spread-pseudos) に書いてました。
+
+```
+@page :left {
+  margin: 〓 〓 〓 〓;
+}
+
+@page :right {
+  margin: 〓 〓 〓 〓;
+}
+```
+
+で単純に解決しました。
+
+@pegeルールに疑似クラス（疑似クラスって何かわかってない。。。）`:left` `:right` を渡すと、ドキュメントへ設定したプロパティが反映されるという理解でいいのだろうなぁ。。。
+
+まぁ、レベル低すぎアホ状態なんだろう、なんか訊くのが恐ろしくなってきた。。。
+
+とにかくCSSページ組版入門は大まかなガイド的に使い、わからなかったらW3Cのリファレンスを見る習慣を付けます。
+
+---
+
+## attr()
+
+`attr()` を使う意義
+
+cssの擬似要素（:beforeや:after）の中に入る要素はcssのcontentで指定することができるが、attrを使用することでjavascriptのようにhtmlから取得することが可能になる。
+
+コンテンツ（構造）と装飾の分離という意味でよりわかりやすい設計になるうえに、記述も少なくて済むからという理由。
+
+---
+
+## 本の構造
+
+`ChapterNo` `SectionNo` があるということは、 `PartNo` `SubsectionNo` も指定できるようです。
+
+| 区別 | 英語 |
+| -- | -- |
+| 編, 部 | Part |
+| 章 | Chapter |
+| 節 | Section	 |
+| 項, 小節 | Subsection |
+| 目, 小々節 | Subsubsection |
+
+---
+
+## 見出しの装飾
+
+この例では節を使う。
+
+問題は、やはり約物の処理。ツメで表現したいときはどうしたらいいか新たな疑問が浮かぶ。
+
+* 接頭語 `●`を自動で付与したい。
+* 見出しを `「」`で囲みたい。
+* 節番号を見出しの末尾に`（）`付き数字で自動付与したい。
+
+```css
+h3::before {
+    counter-increment: SubsectionNo;
+    content: attr(prefix) "\0020" open-quote;
+}
+
+h3::after {
+    content: close-quote "（" counter(SubsectionNo) "）";
+}
+
+h3 {
+    string-set: Subsection content(before) content();
+    quotes: "「" "」"; 
+}
+```
+
+```html
+<h3 prefix="●">CSS組版を素振りしてみる</h3>
+```
+
+---
+
+#### 質問）
+
 『CSSページ組版入門』P64を参照しました。
 
 文字挿入　contentプロパティについて、 `url()` で画像のパスを指定してもリンクが切れている状態です。
@@ -217,17 +367,12 @@ h2::before {
 
 それと、印刷も視野に入れて制作する場合、こういった文字装飾的な画像の解像度は300dpiとしておいてもいいものでしょうか。
 
-> attr() なぜこれがいるのか？
+---
 
-cssの擬似要素（:beforeや:after）の中に入る要素はcssのcontentで指定することができますが、attrを使用することでjavascriptのようにhtmlから取得することができます。
-コンテンツ（構造）と装飾の分離という意味でよりわかりやすい設計になるうえに、記述も少なくて済むのでおすすめ。
+#### 質問）
 
-> `ChapterNo` `SectionNo` があるということは、 `PartNo` `SubsectionNo` もあるということでしょうか？
+『CSSページ組版入門』P103 running(), element() について質問です。
 
-| 区別 | 英語 |
-| -- | -- |
-| 編, 部 | Part |
-| 章 | Chapter |
-| 節 | Section	 |
-| 項, 小節 | Subsection |
-| 目, 小々節 | Subsubsection |
+[W3Cの1.2 Running elements / 1.2.1 The running() value](https://www.w3.org/TR/css-gcpm-3/#funcdef-running) を参考にこのままのコード書き写しましたが、Vivliostyle Viewerで表示できません。
+
+[図](./src/質問-runningとelement.png)
