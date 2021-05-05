@@ -14,8 +14,8 @@
 }
 
 @page :left {
-    margin-right:  14mm;
-    margin-left:  28mm;    
+    margin-right: 14mm;
+    margin-left: 28mm;    
     @top-left-corner {
         margin: -3mm -167mm 12mm -3mm;
         padding: 13mm 0mm 0mm 24.5mm;
