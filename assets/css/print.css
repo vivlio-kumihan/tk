@@ -13,6 +13,18 @@
     }
 }
 
+/* @page :first {
+    page-break-after: right;
+    margin: 0 auto;
+    @top-right-corner {
+        content: none;
+    }
+} */
+
+.ending {
+    page-break-after: right;
+}
+
 @page :left {
     margin-right: 14mm;
     margin-left: 28mm;    
@@ -27,22 +39,6 @@
         background-color: teal;
         border-bottom: 0.6mm solid tomato;
     }    
-    @left-top {
-        content: "hello";
-        background-color: bisque;
-    }
-    @left-middle {
-        background-color: forestgreen;
-        content: element(hashira);
-    }
-    @left-bottom {
-        content: "hello";
-        background-color: aquamarine;
-    }
-}
-
-h5.Hashira {
-    position: running(hashira);
 }
 
 @page :right {
@@ -59,15 +55,6 @@ h5.Hashira {
         background-color: teal;
         border-bottom: 0.6mm solid tomato;
     }
-    @right-top {
-        content: "hello";
-    }
-    @right-middle {
-        content: "hello";
-    }
-    @right-bottom {
-        content: "hello";
-    }
 }
 
 h1::before {
@@ -76,8 +63,13 @@ h1::before {
 }
 
 h1 {
+    page-break-after: right;
     string-set: Chapter content(before) content();
     counter-reset: SectionNo;
+    margin: 0 auto;
+    @top-right-corner {
+        content: none;
+    }
 }
 
 h2::before {
