@@ -1,6 +1,5 @@
 @page {
     size: 182mm 257mm;
-    /* marks: crop cross; */
     bleed: 3mm;
     margin-top: 30mm;
     margin-bottom: 23mm;
@@ -27,22 +26,6 @@
         background-color: teal;
         border-bottom: 0.6mm solid tomato;
     }    
-    @left-top {
-        content: "hello";
-        background-color: bisque;
-    }
-    @left-middle {
-        background-color: forestgreen;
-        content: element(hashira);
-    }
-    @left-bottom {
-        content: "hello";
-        background-color: aquamarine;
-    }
-}
-
-h5.Hashira {
-    position: running(hashira);
 }
 
 @page :right {
@@ -51,7 +34,7 @@ h5.Hashira {
     @top-right-corner {
         margin: -3mm -3mm 12mm -167mm;
         padding: 13mm 24.5mm 0mm 0mm;
-        content: string(Section, start);
+        content: string(Section);
         font-size: 3.25mm;
         font-family: YuMin_36pKn-Medium;
         text-align: right;
@@ -59,71 +42,75 @@ h5.Hashira {
         background-color: teal;
         border-bottom: 0.6mm solid tomato;
     }
-    @right-top {
-        content: "hello";
-    }
-    @right-middle {
-        content: "hello";
-    }
-    @right-bottom {
-        content: "hello";
-    }
 }
 
-h1::before {
+h1 ::before {
+    counter-increment: PartNo;
+    content: "第" counter(PartNo) "部" "\0020";
+}
+
+h1 {
+    page-break-after: right;
+    string-set: Part content(before) content();
+    content: string(Part, start);
+    counter-reset: ChapterNo;
+}
+
+.ending {
+    page-break-after: always;
+}
+
+h2 ::before {
     counter-increment: ChapterNo;
     content: "第" counter(ChapterNo) "章" "\0020";
 }
 
-h1 {
+h2 {
     string-set: Chapter content(before) content();
     counter-reset: SectionNo;
 }
 
-h2::before {
+
+h3 ::before {
     counter-increment: SectionNo;
     content: "第" counter(SectionNo) "節" "\0020" open-quote;
-    /* urlが効かない。 */
-    /* content: url("./assets/img/noun_Plant_1963881.png") "第" counter(SectionNo) "節" open-quote; */
 }
 
-h2::after {
-    /* 多分バグ。close-quoteが小口のテキストに反映しない。 */
-    /* content: close-quote; */
+h3 ::after {
     content: "』";
 }
 
-h2 {
-    /* string-set: Section content(); */
+h3 {
     string-set: Section content(before) content() content(after);
     quotes: "『" "』"; 
     counter-reset: SubsectionNo;
 }
 
-h3::before {
+h4 ::before {
     counter-increment: SubsectionNo;
     content: attr(prefix) "\0020" open-quote;
 }
 
-h3::after {
-    content: close-quote;
-}
-
-h3 {
-    string-set: Subsection content(before) content();
-    quotes: "「" "」"; 
-}
-
-h4::before {
-    counter-increment: SubsubsectionNo;
-    content: attr(prefix) "\0020" open-quote;
-}
-
-h4::after {
+h4 ::after {
     content: close-quote;
 }
 
 h4 {
+    string-set: Subsection content(before) content();
+    counter-reset: SubsubsectionNo;
+    quotes: "「" "」"; 
+}
+
+h5 ::before {
+    counter-increment: SubsubsectionNo;
+    content: attr(prefix) "\0020" open-quote;
+}
+
+h5 ::after {
+    content: close-quote;
+}
+
+h5 {
     string-set: Subsubsection content(before) content();
     quotes: "【" "】"; 
 }
@@ -131,7 +118,8 @@ h4 {
 
 
 body {
-    counter-reset: ChapterNo;
+    /* h1の番号を順に増やしていく場合に、ここでリセットしないと増えない。 */
+    counter-reset: PartNo;
     margin: 0mm 0mm;
     padding: 0mm 0mm;
     color:black;
@@ -145,4 +133,3 @@ p {
     line-height: 6mm;
     text-align:justify;
 }
-
