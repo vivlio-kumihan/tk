@@ -44,6 +44,19 @@
     }
 }
 
+/* @page toc {
+    @bottom-left {
+      content: none;
+    }
+    @bottom-right {
+      content: none;
+    }
+}
+
+.toc {
+    page: toc;
+} */
+
 h1 ::before {
     counter-increment: PartNo;
     content: "第" counter(PartNo) "部" "\0020";
