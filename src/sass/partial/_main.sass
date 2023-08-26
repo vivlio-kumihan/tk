@@ -3,3 +3,25 @@
 main
   width: 100%
   margin: 0 auto
+  text-align: center
+  .greeting
+    height: 75vh
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    h1
+      margin-bottom: 2rem
+      font-size: 6rem
+      line-height: 1
+    p
+      font-size: 1.2rem
+      line-height: 1.7
+
+main
+  +fw.media-query("sp")
+    .greeting
+      h1
+        margin-bottom: 1rem
+        font-size: 6rem
+    
