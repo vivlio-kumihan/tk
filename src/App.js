@@ -1,6 +1,6 @@
-import Header from './conponents/Header';
-import Main from './conponents/Main';
-import Footer from './conponents/Footer';
+import Header from './Header';
+import Main from './Main';
+import Footer from './Footer';
 
 import './App.css';
 
