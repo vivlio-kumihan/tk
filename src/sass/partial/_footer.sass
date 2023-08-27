@@ -11,3 +11,8 @@ footer
   height: 10vh
   color: #fff
   background-color: #333
+  z-index: fw.set_index(footer)
+
+footer
+  +fw.media-query("sp")
+    position: unset

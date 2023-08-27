@@ -1,6 +1,9 @@
+import Hero from "./conponents/Hero"
+
 const Main = () => {
   return (
     <main>
+      <Hero />
       <div className="greeting">
         <h1 lang="en">Hello</h1>
         <p lang="en">Hello everyone, it's been a while.</p>
@@ -8,7 +11,6 @@ const Main = () => {
         <p lang="en">I'm dedicated to continuing my efforts to contribute to your information needs, just as before.</p>
         <p lang="en">Thank you very much for your support.</p><br />
         <p lang="en">Best regards.</p>
-
       </div>
     </main>
   )
