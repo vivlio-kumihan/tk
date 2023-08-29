@@ -15,7 +15,7 @@ const Contact = () => {
   return(
     <Form 
       color={"green"}     // 文字列を渡す
-      num={65031}         // 数値を渡す
+      num={650331}         // 数値を渡す
       member={member}     // オブジェクトを渡す
       myFunc={myFunc}     // 関数を渡す　引数あり
       thisFunc={thisFunc} // 関数を渡す
