@@ -98,6 +98,19 @@ main .greeting p {
   line-height: 1.7;
 }
 
+main .words {
+  margin-bottom: 100px;
+}
+main .words > p {
+  font-family: "Jost", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.7;
+}
+
+main .audio-player {
+  margin-bottom: 100px;
+}
+
 @media screen and (max-width: 428px) {
   main .greeting {
     margin-bottom: 7rem;

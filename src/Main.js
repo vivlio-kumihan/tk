@@ -1,6 +1,7 @@
 import Hero from "./conponents/Hero";
 import Contact from "./conponents/Contact";
 import AudioPlayer from "./conponents/AudioPlayer";
+import Example from "./conponents/Example";
 
 const Main = () => {
   return (
@@ -15,13 +16,17 @@ const Main = () => {
         <p lang="en">Best regards.</p>
       </section>
 
-      <section>
+      <section className="words">
+        <Example />
+      </section>
+
+      <section className="audio-player">
         <AudioPlayer />
       </section>
       
-      <section className="contact">
+      {/* <section className="contact">
         <Contact />
-      </section>
+      </section> */}
     </main>
   )
 };
