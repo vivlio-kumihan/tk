@@ -14,6 +14,10 @@ import 'swiper/css';
 import { Autoplay, EffectFade, Pagination, Navigation } from 'swiper/modules';
 
 const images = [
+  { image: require("../img/110212_2124_G1_10XXXX_029.jpg") },
+  { image: require("../img/110415_3177_EM_110414_020.jpg") },
+  { image: require("../img/110415_3177_EM_110415_034.jpg") },
+  { image: require("../img/110415_3177_EM_110415_036.jpg") },
   { image: require("../img/230701_GX1_1020698.jpg") },
   { image: require("../img/230718_GX1_1020738.jpg") },
   { image: require("../img/230718_GX1_1020745.jpg") },

@@ -1,3 +1,6 @@
+/* __progress-bar.sassで上書きしている。 */
+/* そもそも色などが効いていない。 */
+
 input[type="range"] {
   --range-progress: 0;
 }
