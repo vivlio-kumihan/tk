@@ -14,10 +14,23 @@ import 'swiper/css';
 import { Autoplay, EffectFade, Pagination, Navigation } from 'swiper/modules';
 
 const images = [
+  { image: require("../img/110212_2124_G1_10XXXX_000.jpg") },
+  { image: require("../img/110212_2124_G1_10XXXX_026.jpg") },
+  { image: require("../img/110212_2124_G1_10XXXX_028.jpg") },
   { image: require("../img/110212_2124_G1_10XXXX_029.jpg") },
+  { image: require("../img/110407_3004_XD_110402_009.jpg") },
+  { image: require("../img/110415_3177_EM_110414_003.jpg") },
+  { image: require("../img/110415_3177_EM_110414_006.jpg") },
+  { image: require("../img/110415_3177_EM_110414_011.jpg") },
   { image: require("../img/110415_3177_EM_110414_020.jpg") },
+  { image: require("../img/110415_3177_EM_110415_032.jpg") },
   { image: require("../img/110415_3177_EM_110415_034.jpg") },
   { image: require("../img/110415_3177_EM_110415_036.jpg") },
+  { image: require("../img/130126-35770018.jpg") },
+  { image: require("../img/130126-35770019.jpg") },
+  { image: require("../img/130126-35770024.jpg") },
+  { image: require("../img/130126-35770025.jpg") },
+  { image: require("../img/130126-35770032.jpg") },
   { image: require("../img/230701_GX1_1020698.jpg") },
   { image: require("../img/230718_GX1_1020738.jpg") },
   { image: require("../img/230718_GX1_1020745.jpg") },
@@ -79,6 +92,23 @@ const Hero = () => {
         <SwiperSlide><img src={images[11].image} alt="" /></SwiperSlide>
         <SwiperSlide><img src={images[12].image} alt="" /></SwiperSlide>
         <SwiperSlide><img src={images[13].image} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={images[14].image} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={images[15].image} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={images[16].image} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={images[17].image} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={images[18].image} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={images[19].image} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={images[20].image} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={images[21].image} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={images[22].image} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={images[23].image} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={images[24].image} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={images[25].image} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={images[26].image} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={images[27].image} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={images[28].image} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={images[29].image} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={images[20].image} alt="" /></SwiperSlide>
       </Swiper>
     </>
   );
