@@ -16,11 +16,11 @@ import { Autoplay, EffectFade, Pagination, Navigation } from 'swiper/modules';
 const images = [
   { image: require("../img/110212_2124_G1_10XXXX_000.jpg") },
   { image: require("../img/110212_2124_G1_10XXXX_026.jpg") },
-  { image: require("../img/110212_2124_G1_10XXXX_028.jpg") },
+  // { image: require("../img/110212_2124_G1_10XXXX_028.jpg") },
   { image: require("../img/110212_2124_G1_10XXXX_029.jpg") },
   { image: require("../img/110407_3004_XD_110402_009.jpg") },
   { image: require("../img/110415_3177_EM_110414_003.jpg") },
-  { image: require("../img/110415_3177_EM_110414_006.jpg") },
+  // { image: require("../img/110415_3177_EM_110414_006.jpg") },
   { image: require("../img/110415_3177_EM_110414_011.jpg") },
   { image: require("../img/110415_3177_EM_110414_020.jpg") },
   { image: require("../img/110415_3177_EM_110415_032.jpg") },
@@ -107,8 +107,6 @@ const Hero = () => {
         <SwiperSlide><img src={images[26].image} alt="" /></SwiperSlide>
         <SwiperSlide><img src={images[27].image} alt="" /></SwiperSlide>
         <SwiperSlide><img src={images[28].image} alt="" /></SwiperSlide>
-        <SwiperSlide><img src={images[29].image} alt="" /></SwiperSlide>
-        <SwiperSlide><img src={images[20].image} alt="" /></SwiperSlide>
       </Swiper>
     </>
   );

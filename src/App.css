@@ -218,4 +218,30 @@ main input[type=range]::-moz-focus-outer {
 }
 main input[type=range]:active::-webkit-slider-thumb {
   box-shadow: 0px 5px 10px -2px rgba(0, 0, 0, 0.3);
+}
+
+.controller {
+  margin-bottom: 100px;
+}
+.controller ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+.controller ul li {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+.controller ul li:hover img {
+  transform: scale(115%);
+}
+.controller ul li img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 0.5s;
 }/*# sourceMappingURL=App.css.map */

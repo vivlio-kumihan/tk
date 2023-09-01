@@ -2,6 +2,7 @@ import Hero from "./conponents/Hero";
 import Contact from "./conponents/Contact";
 import AudioPlayer from "./conponents/AudioPlayer";
 import Example from "./conponents/Example";
+import PhotoViewer from "./conponents/PhotoViewer";
 
 const Main = () => {
   return (
@@ -20,13 +21,14 @@ const Main = () => {
         <Example />
       </section>
 
+      <section className="photos">
+        <PhotoViewer />
+      </section>
+
       <section className="audio-player">
         <AudioPlayer />
       </section>
       
-      {/* <section className="contact">
-        <Contact />
-      </section> */}
     </main>
   )
 };
