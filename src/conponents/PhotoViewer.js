@@ -5,7 +5,7 @@ import Controller from './Controller';
 const PhotoViewer = () => {
   // インポートした写真を受ける
   const [photo, setPhoto] = useState(photoList);
-  console.log(photo)
+
   return (
     <div className="photo-viewer">
       <Controller {...{photo}} />
