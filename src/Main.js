@@ -1,5 +1,5 @@
+import React from "react";
 import Hero from "./conponents/Hero";
-import Contact from "./conponents/Contact";
 import AudioPlayer from "./conponents/AudioPlayer";
 import Example from "./conponents/Example";
 import PhotoViewer from "./conponents/PhotoViewer";
@@ -26,11 +26,13 @@ const Main = () => {
       </section>
 
       <section className="audio-player">
-        <AudioPlayer />
+        <React.StrictMode>
+          <AudioPlayer />
+        </React.StrictMode>
       </section>
       
     </main>
-  )
+  );
 };
 
 export default Main;

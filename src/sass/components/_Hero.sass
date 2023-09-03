@@ -2,19 +2,31 @@
 
 main
   .swiper
-    width: 100vw
+    width: 70vw
     height: 85vh
+    margin-top: 5%
     .swiper-wrapper
       .swiper-slide
         img
           width: 100%
-          height: 100%
-          object-fit: contain
+          aspect-ratio: 4/3
+          object-fit: cover
 main
   +fw.media-query("sp")
     .swiper
-      height: 100vh
+      width: 100vw
+      height: 100%
+      margin-top: 0
       .swiper-wrapper
         .swiper-slide
           img
             object-fit: cover
+    .greeting
+      h1
+        margin: 3rem 0 2rem
+    .photos
+      .photo-viewer
+        .controller
+          ul
+            grid-template-columns: repeat(1, 1fr)
+            gap: 20px

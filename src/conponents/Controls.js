@@ -1,45 +1,49 @@
-import { useState, useRef, useEffect, useCallback } from 'react';
+import { useState, useEffect, useRef, useCallback } from "react";
+
+// icons
 import {
   IoPlayBackSharp,
   IoPlayForwardSharp,
   IoPlaySkipBackSharp,
   IoPlaySkipForwardSharp,
   IoPlaySharp,
-  IoPauseSharp,
+  IoPauseSharp
 } from 'react-icons/io5';
 
 const Controls = ({ audioRef, progressBarRef, duration, setTimeProgress }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const togglePlayPause = () => {
     setIsPlaying((prev) => !prev);
-  }
+  };
   const playAnimationRef = useRef();
-
   const repeat = useCallback(() => {
-    console.log('run')
+    // console.log('run');
     const currentTime = audioRef.current.currentTime;
     setTimeProgress(currentTime);
     progressBarRef.current.value = currentTime;
-    // console.log(progressBarRef.current.style)
-    // progressBarRef.current.style.setProperty(
-    //   '--range-progress',
-    //   `${(progressBarRef.current.value / duration) * 100}%`
-    // );
+    progressBarRef.current.style.setProperty(
+      '--range-progress',
+      `${(progressBarRef.current.value / duration) * 100}%`
+    );
     playAnimationRef.current = requestAnimationFrame(repeat);
-  }, [audioRef, duration, progressBarRef, setTimeProgress]);
+  }, [audioRef, progressBarRef, duration, setTimeProgress])
 
   useEffect(() => {
     if (isPlaying) {
       audioRef.current.play();
-      playAnimationRef.current = requestAnimationFrame(repeat)
+      // これと、
+      // playAnimationRef.current = requestAnimationFrame(repeat);
     } else {
       audioRef.current.pause();
-      cancelAnimationFrame(playAnimationRef.current);
+      // これを削除して、
+      // cancelAnimationFrame(playAnimationRef.current)
     }
-    // こんなところに置いたらずっと動きっぱなしになるし、カーソル持って行っても動かないぞ？
-    // playAnimationRef.current = requestAnimationFrame(repeat)
+    // これをこっちに移動する意味がわからない。
+    // useCallback()関数が再生を開始したらずっと動き続けていることに違和感がある。
+    // とりあえず従うか。
+    playAnimationRef.current = requestAnimationFrame(repeat);
   }, [isPlaying, audioRef, repeat]);
-
+  
   return (
     <div className="controls-wrapper">
       <div className="controls">
@@ -49,7 +53,6 @@ const Controls = ({ audioRef, progressBarRef, duration, setTimeProgress }) => {
         <button>
           <IoPlayBackSharp />
         </button>
-
         <button onClick={togglePlayPause}>
           {isPlaying ? <IoPauseSharp /> : <IoPlaySharp />}
         </button>

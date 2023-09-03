@@ -4,11 +4,11 @@ const DisplayTrack = ({ currentTrack, audioRef, setDuration, progressBarRef }) =
   const onLoadedMetadata = () => {
     const seconds = audioRef.current.duration;
     setDuration(seconds);
-    progressBarRef.current.max = seconds;
-  };
+    progressBarRef.current.max = seconds
+  }
   return (
-    <div>
-      <audio 
+    <>
+      <audio
         src={currentTrack.src} 
         ref={audioRef} 
         onLoadedMetadata={onLoadedMetadata}
@@ -16,22 +16,22 @@ const DisplayTrack = ({ currentTrack, audioRef, setDuration, progressBarRef }) =
       <div className="audio-info">
         <div className="audio-image">
           {currentTrack.thumbnail ? (
-            <img width={100} src={currentTrack.thumbnail} alt="audio avatar" />
+            <img src={currentTrack.thumbnail} alt="" />
           ) : (
             <div className="icon-wrapper">
               <span className="audio-icon">
                 <BsMusicNoteBeamed />
               </span>
             </div>
-          )}
+          )};
         </div>
         <div className="text">
           <p className="title">{currentTrack.title}</p>
-          <p>{currentTrack.audio}</p>
+          <p>{currentTrack.author}</p>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
-export default DisplayTrack
+export default DisplayTrack;
