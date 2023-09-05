@@ -3,7 +3,7 @@ const ExampleChild = ({ num, str, myFunc }) => {
     <>
       <p>{str}</p>
       <p>{myFunc()}</p>
-      <p>{num}</p>
+      <small><i>{num}</i></small>
     </>
   )
 }

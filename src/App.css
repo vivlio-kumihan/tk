@@ -129,6 +129,12 @@ main .words p {
   font-weight: 200;
   font-size: 1.65rem;
   line-height: 1.7;
+  letter-spacing: 0.075em;
+}
+main .words small {
+  display: inline-block;
+  margin-top: 30px;
+  letter-spacing: 0.2em;
 }
 
 main .audio-player {
@@ -349,6 +355,8 @@ main .form-style.green {
 }
 
 .controller {
+  margin: 0 auto;
+  width: min(1000px, 95%);
   margin-bottom: 100px;
 }
 .controller ul {
@@ -360,6 +368,7 @@ main .form-style.green {
   padding: 0 5%;
 }
 .controller ul li {
+  position: relative;
   aspect-ratio: 4/3;
   overflow: hidden;
 }
