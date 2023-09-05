@@ -12,6 +12,7 @@ const myFunc = () => {
 const Example = () => {
   return (
     <>
+      <h2>My Function Call Jonny's lyrics</h2>
       <p>Turn off your mind,<br />relax And float down stream</p>
       <ExampleChild
         str={"It is not dying"}

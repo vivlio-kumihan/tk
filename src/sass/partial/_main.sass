@@ -11,19 +11,36 @@ main
     flex-direction: column
     align-items: center
     h1
+      position: relative
       margin: 4rem 0 2rem
-      font-size: 6rem
+      font-family: "Raleway", sans-serif
+      font-size: 8rem
+      font-weight: 100
       line-height: 1
-    p
-      font-size: 1.2rem
-      line-height: 1.7
-
-main
+      letter-spacing: .075em
+      &::after
+        +fw.positionAbsoluteCTL($top: true)
+        right: 52px
+        content: ""
+        width: 7px
+        height: 7px
+        border-radius: 50%
+        background-color: #eee
+    p[lang=en]
+      font-size: 1.65rem
+      line-height: 1.7em
   .words
     margin-bottom: 100px
-    > p
+    h2
+      display: inline-block
       font-family: fw.$jost
-      font-size: 1.25rem
+      font-weight: 300
+      font-size: 2rem
+      border-bottom: 1px solid #999
+    p
+      font-family: fw.$jost
+      font-weight: 200
+      font-size: 1.65rem
       line-height: 1.7
 
 main
