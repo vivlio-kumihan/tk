@@ -14,6 +14,8 @@ import 'swiper/css';
 import { Autoplay, EffectFade, Pagination, Navigation } from 'swiper/modules';
 
 const images = [
+  { image: require("../img/060503_C3040Z_P1010031.jpg") },
+  { image: require("../img/060503_C3040Z_P1010045.jpg") },
   { image: require("../img/110212_2124_G1_10XXXX_026.jpg") },
   { image: require("../img/110212_2124_G1_10XXXX_029.jpg") },
   { image: require("../img/110407_3004_XD_110402_009.jpg") },
@@ -97,6 +99,8 @@ const Hero = () => {
         <SwiperSlide><img src={images[22].image} alt="" /></SwiperSlide>
         <SwiperSlide><img src={images[23].image} alt="" /></SwiperSlide>
         <SwiperSlide><img src={images[24].image} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={images[25].image} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={images[26].image} alt="" /></SwiperSlide>
       </Swiper>
     </>
   );

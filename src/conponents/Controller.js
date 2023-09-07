@@ -1,30 +1,17 @@
 const Controller = ({ photo }) => {
+  const photoList = photo.map((p, idx) => (
+    <li key={ idx }>
+      <img src={ p } alt="" />
+    </li>   
+  ));
+
   return (
     <div className="controller">
       <ul>
-        <li>
-          {/* <div className="mask"></div> */}
-          {/* <div className="image"></div> */}
-          <img src={photo[0]} alt="" />
-        </li>
-        <li>
-          {/* <div className="mask"></div> */}
-          {/* <div className="image"></div> */}
-          <img src={photo[1]} alt="" />
-        </li>
-        <li>
-          {/* <div className="mask"></div> */}
-          {/* <div className="image"></div> */}
-          <img src={photo[2]} alt="" />
-        </li>
-        <li>
-          {/* <div className="mask"></div> */}
-          {/* <div className="image"></div> */}
-          <img src={photo[3]} alt="" />
-        </li>
+        {photoList}
       </ul>
     </div>
-  )
+  );
 };
 
 export default Controller;
