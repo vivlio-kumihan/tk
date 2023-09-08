@@ -87,7 +87,7 @@ const Controls = ({ audioRef, progressBarRef, duration, setTimeProgress, tracks,
     }
   };
 
-  const hancleNext = () => {
+  const handleNext = () => {
     if (trackIndex >= tracks.length - 1) {
       setTrackIndex(0);
       setCurrentTrack(tracks[0]);
@@ -118,10 +118,11 @@ const Controls = ({ audioRef, progressBarRef, duration, setTimeProgress, tracks,
         <button onClick={skipForward}> 
           <IoPlayForwardSharp />
         </button>
-        <button onClick={hancleNext}>
+        <button onClick={handleNext}>
           <IoPlaySkipForwardSharp />
         </button>
       </div>
+
       <div className="volume">
         <div className="volume">
           <button onClick={() => setMuteVolume((prev) => !prev)}>
