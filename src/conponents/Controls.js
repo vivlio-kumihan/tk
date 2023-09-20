@@ -123,7 +123,7 @@ const Controls = ({ audioRef, progressBarRef, duration, setTimeProgress, tracks,
         </button>
       </div>
 
-      <div className="volume">
+      <div className="volume-wrapper">
         <div className="volume">
           <button onClick={() => setMuteVolume((prev) => !prev)}>
             {muteVolume || volume < 5 ? (

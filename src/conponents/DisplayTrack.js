@@ -14,6 +14,7 @@ const DisplayTrack = ({ currentTrack, audioRef, setDuration, progressBarRef, han
         onLoadedMetadata={onLoadedMetadata}
         onEnded={handleNext}
       />
+
       <div className="audio-info">
         <div className="audio-image">
           {currentTrack.thumbnail ? (
@@ -24,11 +25,11 @@ const DisplayTrack = ({ currentTrack, audioRef, setDuration, progressBarRef, han
                 <BsMusicNoteBeamed />
               </span>
             </div>
-          )};
+          )}
         </div>
-        <div className="text">
-          <p className="title">{currentTrack.title}</p>
+        <div className="song-info">
           <p>{currentTrack.author}</p>
+          <p className="title">{currentTrack.title}</p>
         </div>
       </div>
     </>
