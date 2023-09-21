@@ -1,5 +1,20 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 
+// CSSをつけたい。
+// import styled from "styled-components"
+// const StyledButton = styled.button`
+//   margin: auto;
+//   border-radius: 9999px;
+//   border: none;
+//   display: block;
+//   width: 120px;
+//   height: 60px;
+//   font-weight: bold;
+//   cursor: pointer; 
+//   background-color: ${ ({ isSelected }) => isSelected ? "pink" : "" };
+// `
+
+
 // どこにも参照されていないからコメントアウトする。
 // import { BsSkipBackward } from "react-icons/bs";
 
@@ -25,6 +40,7 @@ import {
 
 
 const Controls = ({ audioRef, progressBarRef, duration, setTimeProgress, tracks, trackIndex, setTrackIndex, setCurrentTrack }) => {
+  // set variable and state
   const [isPlaying, setIsPlaying] = useState(false);
   const [volume, setVolume] = useState(60);
   const [muteVolume, setMuteVolume] = useState(false);
@@ -103,6 +119,10 @@ const Controls = ({ audioRef, progressBarRef, duration, setTimeProgress, tracks,
       audioRef.current.muted = muteVolume;
     }
   }, [volume, audioRef, muteVolume])
+
+  // set css
+
+
   return (
     <div className="controls-wrapper">
       <div className="controls">

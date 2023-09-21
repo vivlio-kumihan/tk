@@ -68,22 +68,22 @@ main
     max-width: 1200px
     margin: 0 auto
     padding: 20px
-    /* audio info */
+    // audio info
     .audio-info 
       display: flex
       flex-direction: column
       align-items: center
       gap: 30px
       .audio-image 
-        width: 30vw
-        height: 30vw
+        width: 20vw
+        height: 20vw
         background: #1e1e1e
         img 
           object-fit: cover
           width: 100%
           height: 100%
           vertical-align: middle
-        /* audio image */
+        // audio image
         .icon-wrapper 
           display: flex
           align-items: center
@@ -110,12 +110,13 @@ main
           color: #fff
           background-color: unset
 
-    /* controls */
+    // controls
     .controls-wrapper 
       display: flex
-      justify-content: space-between
+      flex-direction: column
       align-items: center
-      margin-top: 10px
+      gap: 20px
+      margin: 10px 0 30px
       .controls button, .volume button 
         margin-right: 8px
         border: none
@@ -131,34 +132,27 @@ main
           button 
             margin: 0
 
-
+    // progress bar
     .progress 
       display: flex
-      align-items: center
+      justify-content: center
       gap: 10px
       width: 100%
+      padding: 0 30%  
+      /* time */
+      .time 
+        font-size: 14px
+        line-height: 1
+        color: #fff
+        &.current 
+          color: fw.$orange
 
-/* time */
-.time 
-  color: #333
-  font-size: 13px
-  line-height: 46px
-
-.time.current 
-  color: #f50
-
-/* Top bar */
-.top__bar 
-  font-size: 0.875rem
-  line-height: 1.25rem
-  text-align: center
-  padding-top: .5rem
-  padding-bottom: .5rem
-  background-color: #fafafa
-  border-bottom: 1px solid #f0f0f2
-
-.top__bar a 
-  color: inherit
-
-.top__bar p 
-  margin: 0
+// // Top bar 何なのかわからない
+// .top__bar 
+//   font-size: 10rem
+//   line-height: 1.25rem
+//   text-align: center
+//   padding-top: .5rem
+//   padding-bottom: .5rem
+//   background-color: #fafafa
+//   border-bottom: 5px solid #f0f0f2
