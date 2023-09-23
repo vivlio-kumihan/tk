@@ -301,57 +301,96 @@ main .swiper .swiper-wrapper .swiper-slide img {
 main .contact {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   width: 100%;
-  margin: 0 auto 5rem;
-  padding: 80px 0;
+  padding: 80px 5%;
   background-color: #eee;
 }
 main .contact h2 {
+  position: relative;
   margin-bottom: 10px;
   color: #c7c7c7;
 }
+main .contact h2::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 1px 5px 2px;
+  font-size: 1rem;
+  letter-spacing: 0;
+  content: "dummy";
+  color: #F87700;
+  background-color: #fff;
+  transform: rotate(-7deg) translate(-50%, -50%);
+  opacity: 0.7;
+}
 main .contact .note {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   font-size: 1.1rem;
   font-weight: 700;
   color: rgba(48, 73, 196, 0.7);
 }
-main .contact div {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+main .contact .form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+main .contact .form .input-corner, main .contact .form .output-corner {
+  font-size: 14px;
   text-align: left;
   color: #5A5A5A;
 }
-main .contact div + div {
+main .contact .form .input-corner div, main .contact .form .output-corner div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+}
+main .contact .form .input-corner div + div, main .contact .form .output-corner div + div {
   margin-top: 20px;
 }
-main .contact div label {
+main .contact .form .input-corner div:last-of-type, main .contact .form .output-corner div:last-of-type {
+  align-items: flex-start;
+}
+main .contact .form .input-corner div label, main .contact .form .output-corner div label {
   width: 8em;
-  margin-right: 20px;
-  font-size: 15px;
   text-align: right;
   color: #5A5A5A;
 }
-main .contact div input, main .contact div textarea {
-  width: 400px;
-  padding: 1rem;
-  font-size: 14px;
+main .contact .form .input-corner div input, main .contact .form .input-corner div textarea, main .contact .form .output-corner div input, main .contact .form .output-corner div textarea {
+  width: calc(100% - 8em);
+  padding: 1em;
   line-height: 1.7;
   border: 1px solid #c7c7c7;
   border-radius: 3px;
 }
-main .contact div textarea {
+main .contact .form .input-corner div input::-moz-placeholder, main .contact .form .input-corner div textarea::-moz-placeholder, main .contact .form .output-corner div input::-moz-placeholder, main .contact .form .output-corner div textarea::-moz-placeholder {
+  color: #c7c7c7;
+}
+main .contact .form .input-corner div input::placeholder, main .contact .form .input-corner div textarea::placeholder, main .contact .form .output-corner div input::placeholder, main .contact .form .output-corner div textarea::placeholder {
+  color: #c7c7c7;
+}
+main .contact .form .input-corner div textarea, main .contact .form .output-corner div textarea {
   height: 10em;
 }
+main .contact .form .output-corner label {
+  font-weight: 500;
+}
+main .contact .form .output-corner .output {
+  margin: 5px 0 20px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.7;
+}
 main .contact button {
+  display: block;
   margin-top: 50px;
+  margin-left: auto;
   padding: 10px 30px;
   font-size: 16px;
   line-height: 1;
   font-weight: 900;
+  color: #fff;
   background-color: #F87700;
   border: unset;
   border-radius: 5px;
@@ -360,7 +399,7 @@ main .contact button {
 main .contact button:hover {
   transform: translateY(-2px);
   opacity: 0.5;
-  box-shadow: 0 2px 20px #F87700;
+  box-shadow: 0 2px 10px #F87700;
 }
 
 main h2, main h3, main h4, main h5 {

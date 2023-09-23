@@ -4,49 +4,80 @@ main
   .contact
     display: flex
     flex-direction: column
-    align-items: center
     justify-content: center
     width: 100%
-    margin: 0 auto 5rem
-    padding:  80px 0
+    padding:  80px 5%
     background-color: #eee
     h2
+      position: relative
       margin-bottom: 10px
       color: fw.$black-middle
+      &::after
+        position: absolute
+        top: 50%
+        left: 50%
+        padding: 1px 5px 2px
+        font-size: 1rem
+        letter-spacing: 0
+        content: 'dummy'
+        color: fw.$orange
+        background-color: #fff
+        transform: rotate(-7deg) translate(-50%, -50%)
+        opacity: .7
     .note
-      margin-bottom: 50px
+      margin-bottom: 40px
       font-size: 1.1rem
       font-weight: 700
       color: rgba(48, 73, 196, .7)
-    div
-      display: flex
-      justify-content: flex-start
-      align-items: center
-      text-align: left
-      color: fw.$black
-      + div
-        margin-top: 20px
-      label
-        width: 8em
-        margin-right: 20px
-        font-size: 15px
-        text-align: right
-        color: fw.$black
-      input, textarea
-        width: 400px
-        padding: 1rem
+    .form
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      gap: 40px
+      .input-corner, .output-corner
         font-size: 14px
-        line-height: 1.7
-        border: 1px solid fw.$black-middle
-        border-radius: 3px
-      textarea
-        height: 10em
+        text-align: left
+        color: fw.$black
+        div
+          display: flex
+          justify-content: space-between
+          align-items: center
+          gap: 1em
+          + div
+            margin-top: 20px
+          &:last-of-type
+            align-items: flex-start
+          label
+            width: 8em
+            text-align: right
+            color: fw.$black
+          input, textarea
+            width: calc(100% - 8em)
+            padding: 1em
+            line-height: 1.7
+            border: 1px solid fw.$black-middle
+            border-radius: 3px
+          input::placeholder, textarea::placeholder
+            color: fw.$black-middle
+          textarea
+            height: 10em
+      .output-corner
+        label
+          font-weight: 500
+        .output
+          margin: 5px 0 20px
+          font-size: 1.1rem
+          font-weight: 500
+          line-height: 1.7
+
     button
+      display: block
       margin-top: 50px
+      margin-left: auto
       padding: 10px 30px
       font-size: 16px
       line-height: 1
       font-weight: 900
+      color: #fff
       background-color: fw.$orange
       border: unset
       border-radius: 5px
@@ -54,5 +85,5 @@ main
       &:hover
         transform: translateY(-2px)
         opacity: .5
-        box-shadow: 0 2px 20px fw.$orange
+        box-shadow: 0 2px 10px fw.$orange
     
