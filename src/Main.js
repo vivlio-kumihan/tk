@@ -1,9 +1,9 @@
 import React from "react";
-import Hero from "./conponents/Hero";
-import AudioPlayer from "./conponents/AudioPlayer";
-import Example from "./conponents/Example";
-import PhotoViewer from "./conponents/PhotoViewer";
-import Contact from "./conponents/Contact";
+import Hero from "./components/Hero";
+import AudioPlayer from "./components/AudioPlayer";
+import Example from "./components/Example";
+import PhotoViewer from "./components/PhotoViewer";
+import Contact from "./components/Contact";
 
 const Main = () => {
   return (
@@ -32,7 +32,7 @@ const Main = () => {
         </React.StrictMode>
       </section>
 
-      <section className="contact">
+      <section id="contact" className="contact">
         <Contact />
       </section>
       
