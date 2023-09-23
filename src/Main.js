@@ -3,6 +3,7 @@ import Hero from "./conponents/Hero";
 import AudioPlayer from "./conponents/AudioPlayer";
 import Example from "./conponents/Example";
 import PhotoViewer from "./conponents/PhotoViewer";
+import Contact from "./conponents/Contact";
 
 const Main = () => {
   return (
@@ -29,6 +30,10 @@ const Main = () => {
         <React.StrictMode>
           <AudioPlayer />
         </React.StrictMode>
+      </section>
+
+      <section className="contact">
+        <Contact />
       </section>
       
     </main>
