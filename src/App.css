@@ -304,6 +304,7 @@ main .contact {
   justify-content: center;
   width: 100%;
   padding: 80px 5%;
+  color: #5A5A5A;
   background-color: #eee;
 }
 main .contact h2 {
@@ -382,12 +383,17 @@ main .contact .form .output-corner .output {
   font-weight: 500;
   line-height: 1.7;
 }
-main .contact button {
+main .contact .form .output-corner ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+main .contact .form .output-corner ul li button {
   display: block;
-  margin-top: 50px;
-  margin-left: auto;
-  padding: 10px 30px;
-  font-size: 16px;
+  margin-top: 20px;
+  padding: 8px 25px;
+  font-size: 15px;
   line-height: 1;
   font-weight: 900;
   color: #fff;
@@ -396,10 +402,43 @@ main .contact button {
   border-radius: 5px;
   transition: 0.3s;
 }
-main .contact button:hover {
+main .contact .form .output-corner ul li button:hover {
   transform: translateY(-2px);
   opacity: 0.5;
   box-shadow: 0 2px 10px #F87700;
+}
+main .contact .count {
+  margin-top: 60px;
+}
+main .contact .count .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+main .contact .count .wrapper p {
+  font-size: 1.2rem;
+}
+main .contact .count .wrapper .innner-wrap {
+  display: flex;
+  gap: 5px;
+}
+main .contact .count .wrapper .innner-wrap li button {
+  margin: 0;
+  padding: 5px;
+  font-size: 0.95rem;
+  font-weight: 900;
+  color: #fff;
+  background-color: #5A5A5A;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+main .contact .count .wrapper .innner-wrap li button:hover {
+  transform: translateY(-1.5px);
+  box-shadow: 0 0 5px #5A5A5A;
+}
+main .contact .count .wrapper .innner-wrap li + li button {
+  padding: 5px 7px;
 }
 
 main h2, main h3, main h4, main h5 {

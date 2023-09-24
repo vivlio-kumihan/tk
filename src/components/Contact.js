@@ -1,16 +1,25 @@
 import { useState } from 'react';
 
 const Contact = () => {
-  const inputVal = { name: '組版太郎', email: 'kumihan@taro.com', contents: ''};
+  const inputVal = { name: '組版太郎', age: 28, email: 'kumihan@taro.com', contents: ''};
   const [input, setInput] = useState(inputVal);
   const inputName = (e) => {
     setInput(input => ({ ...input, name: e.target.value }))
+  };
+  const inputAge = (e) => {
+    setInput(input => ({ ...input, age: e.target.value }))
   };
   const inputEmail = (e) => {
     setInput(input => ({ ...input, email: e.target.value }))
   };
   const inputContents = (e) => {
     setInput(input => ({ ...input, contents: e.target.value }))
+  };
+  const reset = () => {
+    // どれをやっても入力がリセットされない。理由がわからない。
+    // setInput(input => ({ ...input, name: '', age: 0, email: '', contents: '' }))
+    // setInput({ ...inputVal })
+    setInput({ name: '', age: 0, email: '', contents: '' })
   };
 
   return(
@@ -24,6 +33,10 @@ const Contact = () => {
             <input id="name" type="text" onChange={inputName} placeholder={input.name} />
           </div>
           <div>
+            <label htmlFor="age">年齢</label>
+            <input id="age" type="number" onChange={inputAge} placeholder={input.age} />
+          </div>
+          <div>
             <label htmlFor="email">Email</label>
             <input id="email" type="email" onChange={inputEmail} placeholder={input.email} />
           </div>
@@ -35,11 +48,20 @@ const Contact = () => {
         <div className="output-corner">
           <label htmlFor="name">【お名前】</label>
           <div className="output">{input.name}</div>
+          <label htmlFor="name">【年齢】</label>
+          <div className="output">{input.age}</div>
           <label htmlFor="email">【Email】</label>
           <div className="output">{input.email}</div>
           <label htmlFor="contents">【お問い合せ内容】</label>
           <div className="output">{input.contents}</div>
-          <button type="button">送信</button>
+          <ul className="button-wrap">
+            <li>
+              <button type="button">送信</button>
+            </li>
+            <li>
+              <button type="button" onClick={reset}>リセット</button>
+            </li>
+          </ul>
         </div>
       </div>
     </>
