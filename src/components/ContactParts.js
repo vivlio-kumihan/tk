@@ -50,10 +50,21 @@ const ContactParts = () => {
     }
   }
 
-  const joinArrStr = (arr) => {
-    return arr.join(", ");
-  }
+  // 配列を文字列に変換する。
+  // const joinArrStr = (arr) => {
+  //   return arr.join(", ");
+  // };
 
+  // toggleボタンでカウンターを切り替える。
+  // const [toggle, setToggle] = useState(true);
+  const [counter, setCounter] = useState(0);
+  const counterUp = () => {
+    setCounter((prevstate) => prevstate + 1);
+  };
+  const counterDown = () => {
+    setCounter(counter - 1);
+  };
+  
   return (
     <>
       {/* カウンター */}
@@ -96,6 +107,13 @@ const ContactParts = () => {
       <div className="wrapper for-arr">
         <p>{addArr}</p>
         <button onClick={addCalc}>合計する</button>
+      </div>
+
+      {/* toggleボタンでカウンターを切り替える。 */}
+      <div className="wrapper for-arr toggle">
+        <h3>カウント: {counter}</h3>
+        <button onClick={counterUp}>+</button>
+        <button onClick={counterDown}>-</button>
       </div>
     </>
   );
