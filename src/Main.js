@@ -5,6 +5,7 @@ import Example from "./components/Example";
 import PhotoViewer from "./components/PhotoViewer";
 import Contact from "./components/Contact";
 import Count from "./components/Count";
+import ContactParts from "./components/ContactParts";
 
 const Main = () => {
   return (
@@ -35,9 +36,6 @@ const Main = () => {
 
       <section id="contact" className="contact">
         <Contact />
-        <div className="count">
-          <Count />
-        </div>
       </section>
       
     </main>

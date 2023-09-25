@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import Count from "./Count";
+import ContactParts from "./ContactParts";
 
 const Contact = () => {
   const inputVal = { name: '組版太郎', age: 28, email: 'kumihan@taro.com', contents: ''};
@@ -63,6 +65,12 @@ const Contact = () => {
             </li>
           </ul>
         </div>
+      </div>
+      <div className="count">
+        <Count />
+      </div>
+      <div className="contact-parts">
+        <ContactParts />
       </div>
     </>
   )
