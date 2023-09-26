@@ -55,16 +55,14 @@ const ContactParts = () => {
   //   return arr.join(", ");
   // };
 
-  // toggleボタンでカウンターを切り替える。
-  // const [toggle, setToggle] = useState(true);
-  const [counter, setCounter] = useState(0);
-  const counterUp = () => {
-    setCounter((prevstate) => prevstate + 1);
+  // toggleで状態を切り替える
+  const [toggle, setToggle] = useState(true);
+  const [counterA, setCounterA] = useState(0);
+  const [counterB, setCounterB] = useState(0);
+  const toggleComponent = () => {
+    setToggle(prev => !prev);
   };
-  const counterDown = () => {
-    setCounter(counter - 1);
-  };
-  
+
   return (
     <>
       {/* カウンター */}
@@ -85,11 +83,13 @@ const ContactParts = () => {
         <ul>
           <li>
             <label htmlFor="name">Name:</label>
-            <input id="name" type="text" value={input.name} onChange={inputName} />
+            <input id="name" type="text" placeholder={input.name} onChange={inputName} />
+            {/* <input id="name" type="text" value={input.name} onChange={inputName} /> */}
           </li>
           <li>
             <label htmlFor="age">Age:</label>
-            <input id="age" type="number" value={input.age} onChange={inputAge} />
+            <input id="age" type="number" placeholder={input.age} onChange={inputAge} />
+            {/* <input id="age" type="number" value={input.age} onChange={inputAge} /> */}
           </li>
           <li>
             <button onClick={resetInput}>Input Reset</button>
@@ -109,12 +109,33 @@ const ContactParts = () => {
         <button onClick={addCalc}>合計する</button>
       </div>
 
-      {/* toggleボタンでカウンターを切り替える。 */}
-      <div className="wrapper for-arr toggle">
-        <h3>カウント: {counter}</h3>
-        <button onClick={counterUp}>+</button>
-        <button onClick={counterDown}>-</button>
+      <div className="wrapper for-arr toggle-btn">
+        {/* toggleで状態を切り替える */}
+          {/* 子コンポーネントに状態を持たせない。親コンポーネントで状態を持つこと。 */}
+          {/* 複数の状態を生成しておくこと。 */}
+        <button onClick={toggleComponent}>Toggle</button>
+        {toggle 
+          ? <Counter title="A" key="A" counter={counterA} setCounter={setCounterA} /> 
+          : <Counter title="B" key="B" counter={counterB} setCounter={setCounterB} />
+        }
       </div>
+    </>
+  );
+};
+
+const Counter = ({ title, counter, setCounter }) => {
+  const countUp = () => {
+    setCounter(counter + 1)
+  };
+  const countDown = () => {
+    setCounter(counter - 1)
+  };
+
+  return (
+    <>
+      <h3>{title}: {counter}</h3>
+      <button onClick={countUp}>Count Up</button>
+      <button onClick={countDown}>Count Down</button>
     </>
   );
 };
