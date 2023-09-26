@@ -519,6 +519,12 @@ main .contact .contact-parts .wrapper.for-arr.toggle-btn h3 {
   font-size: 2rem;
 }
 
+main .contact .control-form {
+  background-color: #fff;
+  height: 100vh;
+  padding: 0;
+}
+
 main h2, main h3, main h4, main h5 {
   margin-bottom: 2rem;
 }

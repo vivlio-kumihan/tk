@@ -37,7 +37,6 @@ const Main = () => {
       <section id="contact" className="contact">
         <Contact />
       </section>
-      
     </main>
   );
 };

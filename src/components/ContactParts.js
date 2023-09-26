@@ -60,7 +60,7 @@ const ContactParts = () => {
   const [counterA, setCounterA] = useState(0);
   const [counterB, setCounterB] = useState(0);
   const toggleComponent = () => {
-    setToggle(prev => !prev);
+    setToggle(prev => !prev); 
   };
 
   return (
@@ -113,6 +113,7 @@ const ContactParts = () => {
         {/* toggleで状態を切り替える */}
           {/* 子コンポーネントに状態を持たせない。親コンポーネントで状態を持つこと。 */}
           {/* 複数の状態を生成しておくこと。 */}
+          {/* toggleの関数をsetToggle関数で作っておくこと、これイディオム。 */}
         <button onClick={toggleComponent}>Toggle</button>
         {toggle 
           ? <Counter title="A" key="A" counter={counterA} setCounter={setCounterA} /> 
