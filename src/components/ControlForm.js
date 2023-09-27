@@ -4,6 +4,7 @@ const ControlForm = () => {
   const animals = ["dog", "cat", "sheep"]
   const animalList = animals.map(animal => <li key={ animal }>Hello, { animal }</li>);
 
+  // 今の段階で、これはこれで気に入ってるが下のコードがいいみたい。
   const member = [
     { name: "Geo", age: 18, hobby: ["sports", "music"] },
     { name: "Tom", age: 25, hobby: ["movie", "music"] },

@@ -1,11 +1,31 @@
-const Form = ({}) => {
+import { useState } from "react";
+import imageList from "../data/productGridLaoutSample/imageList"
+
+const GridLayout = ({}) => {
+  const [image, setImage] = useState(imageList);
+  // console.log(image[0]);
+  const product = {
+    pid: "yc001",
+    name: "Stylish Suit",
+    image: image[0],
+    price: 50000
+  };
+  console.log(product.image);
+
   return(
     <>
+    <ul>
+      <li>
+        <img className="frame" src={product.image} key={product.pid} alt={`${product.name}の画像`} />
+        <div className="name">{product.name}</div>
+        <div className="price">{product.price.toLocaleString()}</div>
+      </li>
+    </ul>
     </>
   )
 };
 
-export default Form;
+export default GridLayout;
 
 // {/* propsで文字列を受信する。JSX内で変数を文字列展開する。 */}
 // <h1 lang="en" className={`form-style ${color}`}>props &gt; string</h1>

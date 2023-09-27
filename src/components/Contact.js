@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Count from "./Count";
 import ContactParts from "./ContactParts";
-import ControlForm from "./ControlForm";
+import GridLayout from "./GridLayout";
 
 const Contact = () => {
   const inputVal = { name: '組版太郎', age: 28, email: 'kumihan@taro.com', contents: ''};
@@ -73,8 +73,8 @@ const Contact = () => {
       <div className="contact-parts">
         <ContactParts />
       </div>
-      <div className="control-form">
-        <ControlForm />
+      <div className="grid-layout">
+        <GridLayout />
       </div>
     </>
   )
