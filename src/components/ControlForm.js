@@ -22,7 +22,8 @@ const ControlForm = () => {
           </ul>
         </li>
       </ul>
-    </>);
+    </>
+  );
 
     const [filterChar, setfilterChar] = useState("");
     const target = ["木田", "門井", "井上", "田代"];
