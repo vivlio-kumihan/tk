@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Count from "./Count";
 import ContactParts from "./ContactParts";
 import GridLayout from "./GridLayout";
+import Todo from "./Todo";
 
 const Contact = () => {
   const inputVal = { name: '組版太郎', age: 28, email: 'kumihan@taro.com', contents: ''};
@@ -67,14 +68,18 @@ const Contact = () => {
           </ul>
         </div>
       </div>
+      <h2 className="remainder">Remainder</h2>
+      <div id='todo' className="todo">
+        <Todo />
+      </div>
+      <div className="grid-layout">
+        <GridLayout />
+      </div>
       <div className="count">
         <Count />
       </div>
       <div className="contact-parts">
         <ContactParts />
-      </div>
-      <div className="grid-layout">
-        <GridLayout />
       </div>
     </>
   )

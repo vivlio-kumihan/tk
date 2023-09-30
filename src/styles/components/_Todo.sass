@@ -1,0 +1,50 @@
+@use "../forwards" as fw
+
+main
+  .contact
+    .todo
+      display: flex
+      flex-direction: column
+      align-items: center
+      width: min(100%, 700px)
+      margin: 20px auto 50px
+      ul
+        width: 100%
+        margin: 0 auto
+        li
+          display: flex
+          align-items: center
+          gap: 20px
+          margin-top: 20px
+          padding: 0 40px 20px 40px
+          border-bottom: 1px solid fw.$black-middle
+          &:first-of-type
+            padding-top: 20px
+            border-top: 1px solid fw.$black-middle
+          button
+            padding: 3px 10px
+            border-radius: 5px
+            font-size: .8rem
+            font-weight: 600
+      form
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 30px
+        width: 100%
+        margin-top: 50px
+        input
+          width: 80%
+          margin: 0
+          padding: .5rem 1rem
+          text-align: left
+          background-color: rgba(255, 255, 255, .5)
+          border-radius: 5px
+        button
+          padding: 5px 10px
+          border-radius: 5px
+          font-size: .8rem
+          font-weight: 600
+          color: #fff
+          background-color: fw.$orange
+          border: unset
