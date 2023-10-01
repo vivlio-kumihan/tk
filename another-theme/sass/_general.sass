@@ -1,0 +1,26 @@
+@use "forwards" as fw
+
+// WEBフォントのインポート
+
+// Noto Sans JP
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;600;700;900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap')
+
+button,
+input,
+select,
+textarea
+  -webkit-appearance: auto
+  appearance: auto
+  border-width: 1px
+
+:root 
+  font-size: 100%
+  scroll-behavior: smooth
+  body 
+    font-family: fw.$noto
+    font-weight: 300
+    border: none
+    
+[lang="en"] 
+  font-family: fw.$roboto

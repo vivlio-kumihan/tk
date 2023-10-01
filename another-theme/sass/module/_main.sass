@@ -1,0 +1,150 @@
+@use "../forwards" as fw
+
+main
+  section
+    width: min(100%, 960px)
+    margin: 0 auto
+    padding: 0 4%
+    h2
+      margin: 90px 0 60px
+      font-family: fw.$roboto
+      font-size: 1.7rem
+      font-weight: 500
+      text-align: center
+    ul
+      margin-bottom: 30px
+      li
+        padding: 3px 0
+        span::after
+          content: ' '
+        &.name
+          margin-bottom: 30px
+    p
+      line-height: 1.5
+    &.works
+      ul
+        width: 100%
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: 20px
+        a
+          display: block
+          img
+            width: 100%
+            object-fit: cover
+    &.news
+      dl
+        div
+          display: flex
+          align-items: center
+          &:first-of-type dt, &:first-of-type dd
+            padding-top: 15px 
+            border-top: 1px dotted #aaa
+          dt, dd
+            margin-bottom: 15px
+            padding-bottom: 15px
+            border-bottom: 1px dotted #aaa
+          dt
+            width: 20%
+            font-weight: 300
+            letter-spacing: .1em
+          dd
+            width: 80%
+    &.contact
+      text-align: center
+      ul
+        margin: 0
+        div
+          display: flex
+          + div
+            margin-top: 10px
+          dt
+            width: 15%
+            font-size: 1.1rem
+            font-weight: 300
+          dd
+            width: 85%
+            input
+              width: 100%
+              height: 50px
+              padding: 5px
+              text-align: left
+              border: 1px solid #bbb
+            textarea
+              height: 150px
+              width: 100%
+              padding: 3%
+              text-align: left
+              border: 1px solid #bbb
+      button
+        width: 200px
+        height: 50px
+        margin: 35px 0 130px
+        text-align: center
+        font-size: .9rem
+        font-weight: 500
+        color: #fff
+        background-color: #333
+
++fw.media-query('sp')
+  main
+    section
+      &.about
+        h2
+          margin-bottom: 40px
+        p
+          font-size: .9rem
+      &.works
+        h2
+          margin: 80px 0 40px
+        ul
+          grid-template-columns: 1fr
+      &.news
+        h2
+          margin-bottom: 40px
+        dl
+          div
+            align-items: flex-start
+            flex-direction: column
+            padding: 15px 0
+            border-bottom: 1px dotted #aaa
+            &:first-of-type
+              padding-top: 15px
+              border-top: 1px dotted #aaa
+            &:first-of-type dt, &:first-of-type dd
+              padding-top: 0
+              border-top: unset
+            dt, dd
+              margin: 0
+              padding: 0
+              width: 100%
+              font-size: .9rem
+              font-weight: 400
+              text-align: left
+              border-bottom: unset
+            dt
+              margin-bottom: 5px
+            dd
+              line-height: 1.5
+      &.contact
+        h2
+          margin: 70px 0 40px
+        ul
+          div
+            flex-direction: column
+            dt
+              font-size: 1rem
+              margin-bottom: 3px
+            dd
+              width: 100%
+        button
+          margin: 35px 0 70px
+              
+
+footer
+  width: 100%
+  padding: 10px
+  text-align: center
+  font-size: .7rem
+  color: #fff
+  background-color: #333

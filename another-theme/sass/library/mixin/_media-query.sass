@@ -1,0 +1,22 @@
+@use '../../_variable' as var
+
+$break-point: (sp: 'screen and (max-width: 428px)', tab: 'screen and (min-width: 429px)', pc: 'screen and (min-width: 834px)')
+
+=media-query($bp) 
+  @media #{ map-get($break-point, $bp) }
+    @content
+
+
+// // 汎用的なmediaQuery
+// @mixin mediaQuery($breakPoint)
+//   @media screen and (max-width: $break-point-pc)
+//     @content
+
+// // 多分こちらの設定は不要だと思われる。
+// // = media-query-pc() 
+// //   @media screen and (min-width: var.$bk-point-pc) 
+// //     @content
+
+// =media-query-sp() 
+//   @media screen and (max-width: var.$break-point-sp) 
+//     @content
