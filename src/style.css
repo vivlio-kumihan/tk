@@ -85,6 +85,9 @@ header img {
     background-size: 100%;
   }
 }
+main {
+  background-color: red;
+}
 main section {
   width: min(100%, 960px);
   margin: 0 auto;
@@ -190,6 +193,10 @@ main section.contact button {
   font-weight: 500;
   color: #fff;
   background-color: #333;
+}
+main section .fb-page.fb_iframe_widget {
+  width: 500px;
+  background-color: red;
 }
 
 @media screen and (max-width: 428px) {
