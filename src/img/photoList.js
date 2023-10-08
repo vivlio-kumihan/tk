@@ -5,5 +5,6 @@ import airplane from './110212_2124_G1_10XXXX_026.jpg';
 import shrine from './230721_GX1_1020805.jpg';
 import flower from './130126-35770018.jpg';
 import garden from './230910_cp_09.jpg';
+import tree from './230924_cp_28.jpg';
 
-export const photoList = [kobe01, nob, airplane, cat, shrine, flower, garden];
+export const photoList = [kobe01, nob, airplane, cat, shrine, flower, garden, tree];
