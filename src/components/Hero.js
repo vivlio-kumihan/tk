@@ -42,6 +42,8 @@ const images = [
   { image: require("../img/230730_G9_2466.jpg") },
   { image: require("../img/230730_GX1_1020913.jpg") },
   { image: require("../img/230910_cp_09.jpg") },
+  { image: require("../img/230910_cp_21.jpg") },
+  { image: require("../img/230924_cp_28.jpg") },
 ];
 
 const Hero = () => {
@@ -103,6 +105,8 @@ const Hero = () => {
         <SwiperSlide><img src={images[25].image} alt="" /></SwiperSlide>
         <SwiperSlide><img src={images[26].image} alt="" /></SwiperSlide>
         <SwiperSlide><img src={images[27].image} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={images[28].image} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={images[29].image} alt="" /></SwiperSlide>
       </Swiper>
     </>
   );

@@ -6,5 +6,7 @@ import shrine from './230721_GX1_1020805.jpg';
 import flower from './130126-35770018.jpg';
 import garden from './230910_cp_09.jpg';
 import tree from './230924_cp_28.jpg';
+import girls from './230910_cp_21.jpg';
 
-export const photoList = [kobe01, nob, airplane, cat, shrine, flower, garden, tree];
+export const photoList = [kobe01, nob, airplane, cat, shrine, flower, garden, tree,
+girls];
