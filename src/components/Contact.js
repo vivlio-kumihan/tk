@@ -4,6 +4,7 @@ import ContactParts from "./ContactParts";
 import GridLayout from "./GridLayout";
 import Todo from "./Todo";
 import DownLoad from './DownLoad';
+import AccordionList from './AccordionList';
 
 const Contact = () => {
   const inputVal = { name: '組版太郎', age: 28, email: 'kumihan@taro.com', contents: ''};
@@ -84,6 +85,9 @@ const Contact = () => {
       </div>
       <div className="down-load">
         <DownLoad />
+      </div>
+      <div className="accordion-menu">
+        <AccordionList />
       </div>
     </>
   )

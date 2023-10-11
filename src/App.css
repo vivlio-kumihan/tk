@@ -669,6 +669,47 @@ main .contact .todo form button {
   border: unset;
 }
 
+main .contact .accordion-menu {
+  width: 30%;
+  margin: 50px auto 0;
+  text-transform: uppercase;
+}
+main .contact .accordion-menu ul li {
+  padding: 15px 0;
+  color: #fff;
+  background-color: blue;
+}
+main .contact .accordion-menu ul li + li {
+  border-top: 1px solid #fff;
+}
+main .contact .accordion-menu ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+main .contact .accordion-menu ul li.accordion-li {
+  padding: 0;
+}
+main .contact .accordion-menu ul li.accordion-li button {
+  width: 100%;
+  padding: 15px 0;
+  border: unset;
+}
+main .contact .accordion-menu ul li.accordion-li ul {
+  height: 0;
+  transition: 0.7s;
+  visibility: hidden;
+  opacity: 0;
+}
+main .contact .accordion-menu ul li.accordion-li ul li {
+  padding: 15px 0;
+  line-height: 1.25em;
+  background-color: #555;
+}
+main .contact .accordion-menu ul li.accordion-li ul li + li {
+  border-top: 1px dotted #fff;
+}
+
 .controller {
   margin: 0 auto;
   width: min(1000px, 95%);
