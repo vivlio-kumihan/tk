@@ -697,9 +697,14 @@ main .contact .accordion-menu ul li.accordion-li button {
 }
 main .contact .accordion-menu ul li.accordion-li ul {
   height: 0;
-  transition: 0.7s;
+  transition: 0.3s;
   visibility: hidden;
   opacity: 0;
+}
+main .contact .accordion-menu ul li.accordion-li ul.active {
+  height: auto;
+  visibility: visible;
+  opacity: 1;
 }
 main .contact .accordion-menu ul li.accordion-li ul li {
   padding: 15px 0;

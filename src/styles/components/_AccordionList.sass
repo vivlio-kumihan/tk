@@ -25,9 +25,13 @@ main
               border: unset
             ul
               height: 0
-              transition: .7s
+              transition: .3s
               visibility: hidden
               opacity: 0
+              &.active
+                height: auto
+                visibility: visible
+                opacity: 1
               li
                 padding: 15px 0
                 line-height: 1.25em
