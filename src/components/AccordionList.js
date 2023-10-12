@@ -1,18 +1,18 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 
 const AccordionList = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const currentRef = useRef();
     
   const toggleAccordion = () => {
-    setIsOpen((prev) => {
-      if (isOpen) {
-        currentRef.current.classList.add("active");
-      } else {
-        currentRef.current.classList.remove("active");
-      }
-      return !prev;
-    });
+    setIsOpen((prev) => !prev);
+    if (isOpen) {
+      currentRef.current.classList.add("active");
+      // currentRef.current.style.height = `${currentRef.current.offsetHeight}px`;
+    } else {
+      currentRef.current.classList.remove("active");
+      // currentRef.current.style.height = "0px";
+    }
   }
 
   return (
